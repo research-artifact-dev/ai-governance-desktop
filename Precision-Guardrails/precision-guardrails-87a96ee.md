@@ -1534,6 +1534,9 @@ LLMLingua unsafe for numerical/financial prompts at any retention level (9% nume
 **Related Information**  
 
 
+
+
+[Secure and Govern — SAP AI Agent Hub](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/3ea62b45d7f64a8aab15321424ffb37c.html "Verify AI assets against governance criteria and build a verified inventory.") :arrow_upper_right:
 [Security and Data Protection for AI Agents](../Security-and-Data-Protection/security-and-data-protection-90b7501.md)
 
 [Joule Studio Overview](https://help.sap.com/docs/JOULESTUDIO/7e496fe6f81f4975aec07d9c1cbd2aef/36d3e974446844a1b0ffb7af8fa9446c.html)

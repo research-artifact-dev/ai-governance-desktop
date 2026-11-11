@@ -870,6 +870,10 @@ Line of Business / Application AI — partners on productization and product-roa
 **Related Information**  
 
 
+
+
+[SAP AI Agent Hub](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/8ebd704d35a746c180af003db1f5acb0.html "Introduction to SAP AI Agent Hub, its benefits, and core capabilities.") :arrow_upper_right:
+[Joule Studio — Glossary](https://help.sap.com/docs/JOULESTUDIO/7e496fe6f81f4975aec07d9c1cbd2aef/1e214183c85c4e4faff59a96c724f4fb.html "Key concepts for Joule Studio: custom agents, managed runtime, SAP Business AI Platform.") :arrow_upper_right:
 [FDE Agent Engagement Playbook: Build, Operate, Enable — SAP CIS Edition](FDE-Agent-Engagement-Playbook/fde-agent-engagement-playbook-4e171c5.md)
 
 [Cheat Sheet: Agent Delivery Paths in Joule — FDE Quick Reference](cheat-sheet-cmj-byoa-762d7cd.md)

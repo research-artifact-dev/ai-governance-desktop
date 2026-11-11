@@ -2843,6 +2843,10 @@ TR1 (A2A endpoint) is a prerequisite for eval harness integration. Build A2A exp
 **Related Information**  
 
 
+
+
+[Observe and Analyze — SAP AI Agent Hub](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/1fdc1df35d414cd6bf2ed15ec8a164f4.html "Monitor agent usage, measure business value, and analyze portfolio health.") :arrow_upper_right:
+[SAP AI Agent Hub](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/8ebd704d35a746c180af003db1f5acb0.html "Introduction to SAP AI Agent Hub, its benefits, and core capabilities.") :arrow_upper_right:
 [Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md)
 
 [Agent Evaluation in SAP AI Core](https://help.sap.com/docs/AI_CORE/d5d03749687449ad9768e46ea9e32b1e/233428eb4fca44c9a5ab3a7de7e5f552.html "Agent Evaluation documentation on SAP Help Portal") :arrow_upper_right:

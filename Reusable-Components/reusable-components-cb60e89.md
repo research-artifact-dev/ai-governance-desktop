@@ -12,7 +12,7 @@ CIS operates across multiple Industry AI FDE engagements simultaneously. This to
 
 CIS operates across multiple Industry AI FDE engagements simultaneously, and the number grows as the Autonomous Enterprise vision scales. Without intentional reuse, each engagement rebuilds the same infrastructure from scratch: three supervisor workflows, an audit trail schema, environment migration checklists, a rollback procedure. The build effort is real; the testing effort is real; and a freshly assembled Workflow B has less reliability evidence behind it than one that has run in production across four previous engagements.
 
-Reuse is not just about efficiency. It is also about quality accumulation: production incidents discovered in one engagement feed back into the shared reference implementation so that every subsequent engagement benefits. This is the operational expression of the continuous improvement loop described in [CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) section 6.6, applied not just to individual deployed agents but to the CIS delivery patterns themselves.
+Reuse is not just about efficiency. It is also about quality accumulation: production incidents discovered in one engagement feed back into the shared reference implementation so that every subsequent engagement benefits. This is the operational expression of the continuous improvement loop described in [CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) , applied not just to individual deployed agents but to the CIS delivery patterns themselves.
 
 This topic maps every design component from Chapters 1–8 to its reusability profile: what stays the same across engagements, what requires per-engagement configuration, and what is genuinely engagement-specific. It then defines the **CIS Starter Kit** — the set of reference implementations that CIS T&O should maintain, version, and provide to every FDE team as a starting point.
 
@@ -92,7 +92,7 @@ Supervisor Workflow C (Support Relay)
 </td>
 <td valign="top">
 
-[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.3.3, [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.5
+[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md), [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md)
 
 </td>
 <td valign="top">
@@ -119,7 +119,7 @@ Audit trail schema — base fields
 </td>
 <td valign="top">
 
-[Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) §4.7
+[Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md)
 
 </td>
 <td valign="top">
@@ -146,7 +146,7 @@ Audit trail schema — cost extension
 </td>
 <td valign="top">
 
-[Production Operations](../Production-Operations/production-operations-edd9e33.md) §8.5
+[Production Operations](../Production-Operations/production-operations-edd9e33.md)
 
 </td>
 <td valign="top">
@@ -173,7 +173,7 @@ Telemetry anomaly rule set (Workflow B rule logic)
 </td>
 <td valign="top">
 
-[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.3.2
+[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md)
 
 </td>
 <td valign="top">
@@ -200,7 +200,7 @@ Sanitization rules table (what to strip vs. retain in trace exports)
 </td>
 <td valign="top">
 
-[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.5.3
+[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md)
 
 </td>
 <td valign="top">
@@ -227,7 +227,7 @@ Quality signal escalation structure (Level 0–3)
 </td>
 <td valign="top">
 
-[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md) §1.6
+[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md)
 
 </td>
 <td valign="top">
@@ -254,7 +254,7 @@ Version stack discipline (5 components)
 </td>
 <td valign="top">
 
-[Production Operations](../Production-Operations/production-operations-edd9e33.md) §8.2
+[Production Operations](../Production-Operations/production-operations-edd9e33.md)
 
 </td>
 <td valign="top">
@@ -281,7 +281,7 @@ Supervisor fail-safe rule
 </td>
 <td valign="top">
 
-[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.7
+[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md)
 
 </td>
 <td valign="top">
@@ -308,7 +308,7 @@ Three things never to copy between environments
 </td>
 <td valign="top">
 
-[Production Operations](../Production-Operations/production-operations-edd9e33.md) §8.6
+[Production Operations](../Production-Operations/production-operations-edd9e33.md)
 
 </td>
 <td valign="top">
@@ -335,7 +335,7 @@ When NOT to use multi-agent (decision table)
 </td>
 <td valign="top">
 
-[Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md) §7.1
+[Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md)
 
 </td>
 <td valign="top">
@@ -362,7 +362,7 @@ Multi-agent topology selection table
 </td>
 <td valign="top">
 
-[Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md) §7.3
+[Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md)
 
 </td>
 <td valign="top">
@@ -389,7 +389,7 @@ Three pre-migration checklists (dev→test, test→EAC, EAC→prod)
 </td>
 <td valign="top">
 
-[Production Operations](../Production-Operations/production-operations-edd9e33.md) §8.8
+[Production Operations](../Production-Operations/production-operations-edd9e33.md)
 
 </td>
 <td valign="top">
@@ -416,7 +416,7 @@ Partial failure handling rules in multi-agent (atomic commit principle)
 </td>
 <td valign="top">
 
-[Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md) §7.5
+[Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md)
 
 </td>
 <td valign="top">
@@ -443,7 +443,7 @@ Prompt injection defense system prompt template
 </td>
 <td valign="top">
 
-[Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.7
+[Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md)
 
 </td>
 <td valign="top">
@@ -470,7 +470,7 @@ Pro-code decision table
 </td>
 <td valign="top">
 
-[Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.9
+[Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md)
 
 </td>
 <td valign="top">
@@ -532,7 +532,7 @@ Supervisor Workflow B (Telemetry Monitor) — full workflow
 </td>
 <td valign="top">
 
-[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.3.2, [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.5, [Production Operations](../Production-Operations/production-operations-edd9e33.md) §8.5
+[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md), [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md), [Production Operations](../Production-Operations/production-operations-edd9e33.md)
 
 </td>
 <td valign="top">
@@ -559,7 +559,7 @@ Supervisor Workflow A — routing skeleton
 </td>
 <td valign="top">
 
-[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.3.1, [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.5
+[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md), [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md)
 
 </td>
 <td valign="top">
@@ -586,7 +586,7 @@ Supervisor shared state store schema
 </td>
 <td valign="top">
 
-[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.4.3, [Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md) §7.7
+[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md), [Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md)
 
 </td>
 <td valign="top">
@@ -613,7 +613,7 @@ Four-layer guardrail stack structure
 </td>
 <td valign="top">
 
-[Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) §4.3
+[Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md)
 
 </td>
 <td valign="top">
@@ -640,7 +640,7 @@ sapTaskCenter customAttributes pattern
 </td>
 <td valign="top">
 
-[Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) §4.6, [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.6
+[Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md), [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md)
 
 </td>
 <td valign="top">
@@ -667,7 +667,7 @@ Worker agent base pattern (n8n workflow template)
 </td>
 <td valign="top">
 
-[Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.4
+[Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md)
 
 </td>
 <td valign="top">
@@ -694,7 +694,7 @@ Three-dimension quality framework (evaluation design)
 </td>
 <td valign="top">
 
-[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md) §1.2
+[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md)
 
 </td>
 <td valign="top">
@@ -721,7 +721,7 @@ Eval test suite structure
 </td>
 <td valign="top">
 
-[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md) §1.3
+[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md)
 
 </td>
 <td valign="top">
@@ -748,7 +748,7 @@ Confidence-based routing pattern
 </td>
 <td valign="top">
 
-[Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) §4.8
+[Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md)
 
 </td>
 <td valign="top">
@@ -775,7 +775,7 @@ Cost monitoring extension (Workflow B)
 </td>
 <td valign="top">
 
-[Production Operations](../Production-Operations/production-operations-edd9e33.md) §8.5
+[Production Operations](../Production-Operations/production-operations-edd9e33.md)
 
 </td>
 <td valign="top">
@@ -802,7 +802,7 @@ Environment-agnostic configuration pattern
 </td>
 <td valign="top">
 
-[Production Operations](../Production-Operations/production-operations-edd9e33.md) §8.7
+[Production Operations](../Production-Operations/production-operations-edd9e33.md)
 
 </td>
 <td valign="top">
@@ -829,7 +829,7 @@ Rollback procedure template
 </td>
 <td valign="top">
 
-[Production Operations](../Production-Operations/production-operations-edd9e33.md) §8.3
+[Production Operations](../Production-Operations/production-operations-edd9e33.md)
 
 </td>
 <td valign="top">
@@ -856,7 +856,7 @@ Cross-worker consistency check pattern types
 </td>
 <td valign="top">
 
-[Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md) §7.5
+[Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md)
 
 </td>
 <td valign="top">
@@ -883,7 +883,7 @@ Severity tier table and operating rhythm
 </td>
 <td valign="top">
 
-[CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) §6.5
+[CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md)
 
 </td>
 <td valign="top">
@@ -910,7 +910,7 @@ Continuous improvement loop
 </td>
 <td valign="top">
 
-[CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) §6.6
+[CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md)
 
 </td>
 <td valign="top">
@@ -967,7 +967,7 @@ Worker agent business logic
 </td>
 <td valign="top">
 
-[Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.4
+[Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md)
 
 </td>
 <td valign="top">
@@ -989,7 +989,7 @@ Process KPIs (Dimension 2 of quality framework)
 </td>
 <td valign="top">
 
-[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md) §1.2
+[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md)
 
 </td>
 <td valign="top">
@@ -1011,7 +1011,7 @@ Workflow A Code node verification rules
 </td>
 <td valign="top">
 
-[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.3.1, [Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) §4.5
+[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md), [Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md)
 
 </td>
 <td valign="top">
@@ -1033,7 +1033,7 @@ LLM critic systemPrompt
 </td>
 <td valign="top">
 
-[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.3.1, [Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) §4.5
+[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md), [Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md)
 
 </td>
 <td valign="top">
@@ -1055,7 +1055,7 @@ Human approval threshold values
 </td>
 <td valign="top">
 
-[Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) §4.6
+[Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md)
 
 </td>
 <td valign="top">
@@ -1077,7 +1077,7 @@ Authorization matrices (all agents)
 </td>
 <td valign="top">
 
-[Security and Data Protection](../Security-and-Data-Protection/security-and-data-protection-90b7501.md), [Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md) §7.6
+[Security and Data Protection](../Security-and-Data-Protection/security-and-data-protection-90b7501.md), [Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md)
 
 </td>
 <td valign="top">
@@ -1099,7 +1099,7 @@ Anomaly detection threshold values
 </td>
 <td valign="top">
 
-[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.6
+[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md)
 
 </td>
 <td valign="top">
@@ -1121,7 +1121,7 @@ Regulatory audit trail retention period
 </td>
 <td valign="top">
 
-[Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) §4.7
+[Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md)
 
 </td>
 <td valign="top">
@@ -1143,7 +1143,7 @@ Cross-worker consistency check logic
 </td>
 <td valign="top">
 
-[Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md) §7.5
+[Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md)
 
 </td>
 <td valign="top">
@@ -1165,7 +1165,7 @@ Business outcome metrics (Dimension 3)
 </td>
 <td valign="top">
 
-[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md) §1.2
+[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md)
 
 </td>
 <td valign="top">
@@ -1187,7 +1187,7 @@ Eval test cases and test data
 </td>
 <td valign="top">
 
-[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md) §1.3
+[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md)
 
 </td>
 <td valign="top">
@@ -1209,7 +1209,7 @@ LLM critic test suite
 </td>
 <td valign="top">
 
-[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.8
+[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md)
 
 </td>
 <td valign="top">
@@ -1283,7 +1283,7 @@ Design target
 </td>
 <td valign="top">
 
-Not yet a standalone artifact; no supervisor workflow exists in the LightSpeed catalog either — build per [Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.3.2 / [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.5 patterns
+Not yet a standalone artifact; no supervisor workflow exists in the LightSpeed catalog either — build per [Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) / [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) patterns
 
 </td>
 </tr>
@@ -1300,7 +1300,7 @@ Design target
 </td>
 <td valign="top">
 
-Not yet a standalone artifact; patterns from §2.5.3 and [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.10
+Not yet a standalone artifact; patterns from and [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md)
 
 </td>
 </tr>
@@ -1334,7 +1334,7 @@ Available now
 </td>
 <td valign="top">
 
-Schema per [Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) §4.7 / [Production Operations](../Production-Operations/production-operations-edd9e33.md) §8.5; the audit-trail table is provisioned by the LightSpeed BTP Terraform modules (`infra/btp/`) — parameterize per engagement
+Schema per [Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) / [Production Operations](../Production-Operations/production-operations-edd9e33.md); the audit-trail table is provisioned by the LightSpeed BTP Terraform modules (`infra/btp/`) — parameterize per engagement
 
 </td>
 </tr>
@@ -1351,7 +1351,7 @@ Design target
 </td>
 <td valign="top">
 
-DDL schema specified in [Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.4.3 / [Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md) §7.7; standalone file not yet published
+DDL schema specified in [Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) / [Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md); standalone file not yet published
 
 </td>
 </tr>
@@ -1368,7 +1368,7 @@ Available now
 </td>
 <td valign="top">
 
-[Production Operations](../Production-Operations/production-operations-edd9e33.md) §8.8 templates; copy and fill per engagement
+[Production Operations](../Production-Operations/production-operations-edd9e33.md) templates; copy and fill per engagement
 
 </td>
 </tr>
@@ -1385,7 +1385,7 @@ Available now
 </td>
 <td valign="top">
 
-[Production Operations](../Production-Operations/production-operations-edd9e33.md) §8.7 — derive from documented pattern
+[Production Operations](../Production-Operations/production-operations-edd9e33.md) — derive from documented pattern
 
 </td>
 </tr>
@@ -1402,7 +1402,7 @@ Available now
 </td>
 <td valign="top">
 
-[Production Operations](../Production-Operations/production-operations-edd9e33.md) §8.3 — template with placeholders
+[Production Operations](../Production-Operations/production-operations-edd9e33.md) — template with placeholders
 
 </td>
 </tr>
@@ -1419,7 +1419,7 @@ Available now
 </td>
 <td valign="top">
 
-[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.5.3 table
+[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) table
 
 </td>
 </tr>
@@ -1436,7 +1436,7 @@ Available now
 </td>
 <td valign="top">
 
-[Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.7
+[Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md)
 
 </td>
 </tr>
@@ -1590,9 +1590,7 @@ Description
 </td>
 <td valign="top">
 
-HANA Cloud DDL for the append-only audit trail table; includes all base fields and cost extension fields from [Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) section 4.7 and [Production Operations](../Production-Operations/production-operations-edd9e33.md) section 8.5
-
-</td>
+HANA Cloud DDL for the append-only audit trail table; includes all base fields and cost extension fields from [Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) and [Production Operations](../Production-Operations/production-operations-edd9e33.md) </td>
 </tr>
 <tr>
 <td valign="top">
@@ -1602,13 +1600,13 @@ HANA Cloud DDL for the append-only audit trail table; includes all base fields a
 </td>
 <td valign="top">
 
-**Design target:** HANA Cloud DDL for the supervisor shared state store (baseline table + Pending Set table for multi-agent Topology 3). The schema is specified in [Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.4.3 / [Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md) §7.7; a standalone DDL file is not yet published
+**Design target:** HANA Cloud DDL for the supervisor shared state store (baseline table + Pending Set table for multi-agent Topology 3). The schema is specified in [Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) / [Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md); a standalone DDL file is not yet published
 
 </td>
 </tr>
 </table>
 
-**HANA Cloud provisioning**: both DDL artifacts target HANA Cloud (not HANA on-premise). HANA Cloud is provisioned as a BTP service in the engagement's BTP sub-account. In Project LightSpeed, `pilot.yaml` handles HANA Cloud provisioning as part of the BTP desired-state model — `cookbookctl apply` provisions the HANA Cloud instance, schema, and all required tables in a single operation. For engagements not using LightSpeed, provision HANA Cloud manually via the BTP cockpit: allocate the HANA Cloud free tier or production plan in the appropriate sub-account, create the schema, and run the DDL scripts. Estimated storage for audit trail and shared state store: plan for 10–50 MB per month of production operation per agent; the append-only audit trail grows continuously — confirm a retention policy with the customer compliance team ([Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) §4.7) and implement scheduled archiving after 90 days.
+**HANA Cloud provisioning**: both DDL artifacts target HANA Cloud (not HANA on-premise). HANA Cloud is provisioned as a BTP service in the engagement's BTP sub-account. In Project LightSpeed, `pilot.yaml` handles HANA Cloud provisioning as part of the BTP desired-state model — `cookbookctl apply` provisions the HANA Cloud instance, schema, and all required tables in a single operation. For engagements not using LightSpeed, provision HANA Cloud manually via the BTP cockpit: allocate the HANA Cloud free tier or production plan in the appropriate sub-account, create the schema, and run the DDL scripts. Estimated storage for audit trail and shared state store: plan for 10–50 MB per month of production operation per agent; the append-only audit trail grows continuously — confirm a retention policy with the customer compliance team ([Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md)) and implement scheduled archiving after 90 days.
 
 **Process and Configuration Artifacts**:
 
@@ -1636,7 +1634,7 @@ Description
 </td>
 <td valign="top">
 
-Three environment transition checklists ([Production Operations](../Production-Operations/production-operations-edd9e33.md) section 8.8); used unchanged for every engagement
+Three environment transition checklists ([Production Operations](../Production-Operations/production-operations-edd9e33.md) ); used unchanged for every engagement
 
 </td>
 </tr>
@@ -1648,7 +1646,7 @@ Three environment transition checklists ([Production Operations](../Production-O
 </td>
 <td valign="top">
 
-Configuration parameter naming convention and environment-agnostic wiring pattern ([Production Operations](../Production-Operations/production-operations-edd9e33.md) section 8.7)
+Configuration parameter naming convention and environment-agnostic wiring pattern ([Production Operations](../Production-Operations/production-operations-edd9e33.md) )
 
 </td>
 </tr>
@@ -1672,7 +1670,7 @@ Rollback procedure template with placeholders for engagement-specific component 
 </td>
 <td valign="top">
 
-Sanitization rules table ([Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) section 2.5.3); included by reference in the Sirius security concept documentation
+Sanitization rules table ([Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) ); included by reference in the Sirius security concept documentation
 
 </td>
 </tr>
@@ -1684,7 +1682,7 @@ Sanitization rules table ([Supervisor Agent Pattern](../Supervisor-Agent-Pattern
 </td>
 <td valign="top">
 
-Per-workflow security checklist ([Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) section 5.7); used as a review gate before every environment transition
+Per-workflow security checklist ([Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) ); used as a review gate before every environment transition
 
 </td>
 </tr>
@@ -1740,7 +1738,7 @@ The Starter Kit is owned by CIS T&O and governed as a product, not as documentat
 
 -   **Update cadence**: the Starter Kit is updated when BAIP platform changes affect the reference workflows, when a production incident reveals a gap in the rule set or schema, or when a completed engagement produces a generalizable improvement.
 
--   **Improvement pipeline**: production findings from the continuous improvement loop ([CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) section 6.6) that are generalizable across engagements are proposed as Starter Kit updates. CIS T&O reviews and merges them.
+-   **Improvement pipeline**: production findings from the continuous improvement loop ([CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) ) that are generalizable across engagements are proposed as Starter Kit updates. CIS T&O reviews and merges them.
 
 -   **Deprecation**: when BAIP node APIs or Joule Studio behavior changes, the Starter Kit is updated before the next engagement forks from it. Running a stale fork in production without reconciling against the current version is a governance gap.
 
@@ -2735,7 +2733,7 @@ These are estimates for planning purposes, not commitments. Actual effort depend
 
 The freed capacity goes into the work that actually differentiates the engagement: the worker agent's business logic, the evaluation test suite, integration testing, and the process owner alignment sessions that determine threshold values.
 
-**Important**: the [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) section 5.10 build sequence still applies when using the Starter Kit. Fork and configure the supervisor workflows only after the worker agent is stable — not before. A supervisor configured to govern an unstable worker creates debugging noise that slows the sprint.
+**Important**: the [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) build sequence still applies when using the Starter Kit. Fork and configure the supervisor workflows only after the worker agent is stable — not before. A supervisor configured to govern an unstable worker creates debugging noise that slows the sprint.
 
 
 <a name="loiocb60e894e5814d6087247467f7106b39__section_agent_hub_relationship"/>
@@ -2759,7 +2757,7 @@ The Starter Kit does not duplicate any of these capabilities. It implements the 
 
 ## Continuous Improvement: From Production Back to the Starter Kit
 
-The continuous improvement loop in [CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) section 6.6 runs within individual engagements. The Starter Kit adds a second loop that runs across engagements.
+The continuous improvement loop in [CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) runs within individual engagements. The Starter Kit adds a second loop that runs across engagements.
 
 ```
 [Production engagement N]
@@ -2890,6 +2888,10 @@ The division of labour is clear: CIS T&O invests in making Layers 1 and 2 excell
 **Related Information**  
 
 
+
+
+[Joule Studio — Glossary](https://help.sap.com/docs/JOULESTUDIO/7e496fe6f81f4975aec07d9c1cbd2aef/1e214183c85c4e4faff59a96c724f4fb.html "Key concepts for Joule Studio: custom agents, managed runtime, SAP Business AI Platform.") :arrow_upper_right:
+[Code-Based Agents (Bring Your Own Agent)](https://help.sap.com/docs/JOULE/ba88d1ec6a1b442098863d577c19b0c0/2f9701e60fd24e948c2c74fe9e55ce23.html "How to register a custom code-based agent (BYOA) to Joule via A2A.") :arrow_upper_right:
 [Token Efficiency in Industry AI Delivery](../Token-Efficiency/token-efficiency-47721ff.md)
 
 [Production Operations](../Production-Operations/production-operations-edd9e33.md)

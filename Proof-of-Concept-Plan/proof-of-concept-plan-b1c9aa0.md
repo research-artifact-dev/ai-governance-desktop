@@ -178,7 +178,7 @@ If a live SAP S/4HANA system is not available:
 
 -   1 FDE Application Engineer to build the workflows
 -   1 Data Scientist or Domain PM to author the LLM critic system prompt and calibrate verification rules
--   Access to the CIS Starter Kit ([Reusable Components and Reference Implementations](../Reusable-Components/reusable-components-cb60e89.md) section 9.4) for Workflow A skeleton and DDL scripts
+-   Access to the CIS Starter Kit ([Reusable Components and Reference Implementations](../Reusable-Components/reusable-components-cb60e89.md) ) for Workflow A skeleton and DDL scripts
 
 
 <a name="loiob1c9aa0acc12415c8052d6b9b5d33316__section_scenario"/>
@@ -277,7 +277,7 @@ This PoC implements the **committer pattern**: the worker agent is **recommend-o
 
 ## Build Plan
 
-Follow the [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) section 5.10 build sequence: worker first, supervisor second, integration third. Never add the supervisor to an unstable worker.
+Follow the [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) build sequence: worker first, supervisor second, integration third. Never add the supervisor to an unstable worker.
 
 ### Step 1: Environment Setup (Day 1, ~3 hours)
 
@@ -295,7 +295,7 @@ Build the worker agent workflow in Joule Studio n8n:
 
 ```
 [Webhook trigger or Manual trigger]
-  Input: batch input JSON (paste from synthetic data in section 6)
+  Input: batch input JSON (paste from synthetic data in )
          ↓
 [Code node: "Return synthetic batch data"]
   Hardcodes the synthetic input values as if retrieved from SAP
@@ -572,7 +572,7 @@ For each test case, verify:
 -   [ ] `sapAgent` outcome notification (COMMITTED) or rejection signal reaches the worker
 -   [ ] Worker logs the outcome correctly (it does not itself commit or write back)
 -   [ ] Audit trail record created for every invocation (including blocked ones)
--   [ ] Audit trail record contains all required fields (check against [Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) §4.7 field list)
+-   [ ] Audit trail record contains all required fields (check against [Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) field list)
 -   [ ] Audit trail records cannot be modified (attempt UPDATE and verify failure)
 -   [ ] For Test Case 4 (disagree): both stage verdicts are visible in the Task Center task
 -   [ ] For Test Case 6 (supervisor unavailable): no autonomous write-back occurs
@@ -783,7 +783,7 @@ Deploy the `cis-supervisor-workflow-b-ref` Starter Kit workflow. Set it to a 1-m
 Add the four cost extension fields (`input_tokens`, `output_tokens`, `total_tokens_invocation`, `model_used`) to the audit trail Code node. After running all test cases, show the per-invocation token counts in the table and calculate cost-per-committed-output for the approved case.
 
 **Extension C — Second Worker + Shared Supervisor (Topology 3, ~3 days)**
-Add a second worker (e.g., a deviation classification agent) and configure both workers to use the same Supervisor Workflow A (shared supervisor). Demonstrate that one supervisor can handle callbacks from two different workers, differentiating verification by `agent_identity`. Demonstrates [Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md) section 7.3 Topology 3.
+Add a second worker (e.g., a deviation classification agent) and configure both workers to use the same Supervisor Workflow A (shared supervisor). Demonstrate that one supervisor can handle callbacks from two different workers, differentiating verification by `agent_identity`. Demonstrates [Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md) Topology 3.
 
 **Extension D — Supervisor Workflow C (Support Relay, ~1 day)**
 Deploy the `cis-supervisor-workflow-c-ref` Starter Kit workflow. Trigger it from Workflow B with a simulated anomaly event. Show the sanitization pass and the resulting SAP support ticket (or simulated ticket payload) with no business data.
@@ -812,7 +812,7 @@ What It Specifies for This PoC
 <tr>
 <td valign="top">
 
-[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md) §1.3.5
+[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md)
 
 </td>
 <td valign="top">
@@ -824,7 +824,7 @@ Judge verdict model (3-way C/I/N) — the LLM critic stage uses Complete/Incompl
 <tr>
 <td valign="top">
 
-[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md) §1.4.3–1.4.4
+[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md)
 
 </td>
 <td valign="top">
@@ -836,7 +836,7 @@ Self-verification pattern — the logic inside Workflow A's two verification sta
 <tr>
 <td valign="top">
 
-[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.3.1
+[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md)
 
 </td>
 <td valign="top">
@@ -848,7 +848,7 @@ Supervisor Workflow A — the full execution pattern this PoC implements
 <tr>
 <td valign="top">
 
-[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.4.1
+[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md)
 
 </td>
 <td valign="top">
@@ -860,7 +860,7 @@ Worker-supervisor communication — `sapAgent` non-blocking + Webhook callback
 <tr>
 <td valign="top">
 
-[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.7
+[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md)
 
 </td>
 <td valign="top">
@@ -872,7 +872,7 @@ Supervisor governance and fail-safe default
 <tr>
 <td valign="top">
 
-[Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) §4.7
+[Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md)
 
 </td>
 <td valign="top">
@@ -884,7 +884,7 @@ Audit trail schema — all fields the PoC must record
 <tr>
 <td valign="top">
 
-[Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.5
+[Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md)
 
 </td>
 <td valign="top">
@@ -896,7 +896,7 @@ Workflow A n8n implementation — node-by-node reference
 <tr>
 <td valign="top">
 
-[Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.10
+[Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md)
 
 </td>
 <td valign="top">
@@ -908,7 +908,7 @@ Build sequence — the order in which to build and test
 <tr>
 <td valign="top">
 
-[Production Operations](../Production-Operations/production-operations-edd9e33.md) §8.5
+[Production Operations](../Production-Operations/production-operations-edd9e33.md)
 
 </td>
 <td valign="top">
@@ -920,7 +920,7 @@ Cost extension fields for the audit trail
 <tr>
 <td valign="top">
 
-[Reusable Components and Reference Implementations](../Reusable-Components/reusable-components-cb60e89.md) §9.4
+[Reusable Components and Reference Implementations](../Reusable-Components/reusable-components-cb60e89.md)
 
 </td>
 <td valign="top">
@@ -934,6 +934,10 @@ Starter Kit — `cis-supervisor-workflow-a-skeleton` and `cis-audit-trail-ddl.sq
 **Related Information**  
 
 
+
+
+[Code-Based Agents (Bring Your Own Agent)](https://help.sap.com/docs/JOULE/ba88d1ec6a1b442098863d577c19b0c0/2f9701e60fd24e948c2c74fe9e55ce23.html "How to register a custom code-based agent (BYOA) to Joule via A2A.") :arrow_upper_right:
+[Joule Studio — Glossary](https://help.sap.com/docs/JOULESTUDIO/7e496fe6f81f4975aec07d9c1cbd2aef/1e214183c85c4e4faff59a96c724f4fb.html "Key concepts for Joule Studio: custom agents, managed runtime, SAP Business AI Platform.") :arrow_upper_right:
 [Open Questions](../Open-Questions/open-questions-a12bf85.md)
 
 [Joule Studio Overview](https://help.sap.com/docs/JOULESTUDIO/7e496fe6f81f4975aec07d9c1cbd2aef/36d3e974446844a1b0ffb7af8fa9446c.html)

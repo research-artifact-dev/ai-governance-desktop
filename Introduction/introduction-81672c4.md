@@ -70,9 +70,7 @@ How do we ensure an agent works correctly — at build time and at runtime?
 [Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md) — Agent Quality Framework
 
 </td>
-<td valign="top">
-
-§1.2 Three evaluation dimensions; §1.3 Build-time quality; §1.4 Runtime quality; §1.4.5 Iteration signals
+<td valign="top"> Three evaluation dimensions; Build-time quality; Runtime quality; Iteration signals
 
 </td>
 </tr>
@@ -94,7 +92,7 @@ How do we handle failures autonomously: self-correct vs. escalate?
 </td>
 <td valign="top">
 
-[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md) §1.6 Escalation path; [Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.3 Supervisor functions; [Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.6 Escalation thresholds
+[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md) Escalation path; [Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) Supervisor functions; [Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) Escalation thresholds
 
 </td>
 </tr>
@@ -114,9 +112,7 @@ Does a supervisor agent pattern make sense within SAP's architecture?
 [Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) — Supervisor Agent Pattern
 
 </td>
-<td valign="top">
-
-§2.1 Supervision tier; §2.2 Alternatives; §2.3 Three functions; §2.4 Architecture
+<td valign="top"> Supervision tier; Alternatives; Three functions; Architecture
 
 </td>
 </tr>
@@ -138,7 +134,7 @@ How do we protect customer data while still enabling operational monitoring?
 </td>
 <td valign="top">
 
-[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.5 Data protection design; [Security and Data Protection](../Security-and-Data-Protection/security-and-data-protection-90b7501.md) §3.8 Data protection architecture; [Security and Data Protection](../Security-and-Data-Protection/security-and-data-protection-90b7501.md) §3.9 Sovereign AI; [Security and Data Protection](../Security-and-Data-Protection/security-and-data-protection-90b7501.md) §3.11 Legal alignment
+[Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) Data protection design; [Security and Data Protection](../Security-and-Data-Protection/security-and-data-protection-90b7501.md) Data protection architecture; [Security and Data Protection](../Security-and-Data-Protection/security-and-data-protection-90b7501.md) Sovereign AI; [Security and Data Protection](../Security-and-Data-Protection/security-and-data-protection-90b7501.md) Legal alignment
 
 </td>
 </tr>
@@ -158,9 +154,7 @@ How do we address security at development time AND at runtime?
 [Security and Data Protection](../Security-and-Data-Protection/security-and-data-protection-90b7501.md) — Security & Data Protection
 
 </td>
-<td valign="top">
-
-§3.3 Development-time security; §3.4 Runtime security; §3.5 Agent identity; §3.7 Prompt injection
+<td valign="top"> Development-time security; Runtime security; Agent identity; Prompt injection
 
 </td>
 </tr>
@@ -180,9 +174,7 @@ How do we enforce precision guardrails for business-critical numerical outputs?
 [Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) — Precision Guardrails
 
 </td>
-<td valign="top">
-
-§4.3 Guardrail stack; §4.4–§4.7 Four layers; §4.8 Confidence and uncertainty
+<td valign="top"> Guardrail stack;– Four layers; Confidence and uncertainty
 
 </td>
 </tr>
@@ -202,9 +194,7 @@ How do we manage agent lifecycle after productization: monitor, maintain, and co
 [CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) — CIS CoE Operations Model
 
 </td>
-<td valign="top">
-
-§6.1 Lifecycle shift; §6.4 Supervisor as CIS proxy; §6.5 Operating rhythm; §6.6 Continuous improvement loop
+<td valign="top"> Lifecycle shift; Supervisor as CIS proxy; Operating rhythm; Continuous improvement loop
 
 </td>
 </tr>
@@ -224,9 +214,7 @@ When does an Industry AI use case require multiple specialist agents, and how do
 [Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md) — Multi-Agent Orchestration
 
 </td>
-<td valign="top">
-
-§7.1 When multi-agent; §7.2 SAP orchestration model; §7.3 Three topologies; §7.5 Quality extension; §7.7 Supervisor extension
+<td valign="top"> When multi-agent; SAP orchestration model; Three topologies; Quality extension; Supervisor extension
 
 </td>
 </tr>
@@ -246,9 +234,7 @@ How do we version, roll back, and migrate agents across environments without ser
 [Production Operations](../Production-Operations/production-operations-edd9e33.md) — Production Operations
 
 </td>
-<td valign="top">
-
-§8.2 Versioning strategy; §8.3 Rollback mechanics; §8.6 Environment migration
+<td valign="top"> Versioning strategy; Rollback mechanics; Environment migration
 
 </td>
 </tr>
@@ -268,9 +254,7 @@ Which design components can be reused across engagements, and what constitutes a
 [Reusable Components and Reference Implementations](../Reusable-Components/reusable-components-cb60e89.md) — Reusable Components
 
 </td>
-<td valign="top">
-
-§9.2 Three-layer reusability stack; §9.3 Component-by-component analysis; §9.4 CIS Starter Kit
+<td valign="top"> Three-layer reusability stack; Component-by-component analysis; CIS Starter Kit
 
 </td>
 </tr>
@@ -290,9 +274,7 @@ How do we manage token efficiency across FDE build-time and Industry AI runtime 
 [Token Efficiency in Industry AI Delivery](../Token-Efficiency/token-efficiency-47721ff.md) — Token Efficiency
 
 </td>
-<td valign="top">
-
-§10.2 L0–L6 framework; §10.3 Build-time guidelines (FDE engineers); §10.4 Runtime efficiency (deployed agents); §10.5 Quality–efficiency connection
+<td valign="top"> L0–L6 framework; Build-time guidelines (FDE engineers); Runtime efficiency (deployed agents); Quality–efficiency connection
 
 </td>
 </tr>
@@ -312,9 +294,7 @@ How do we evaluate agent quality systematically across an FDE sprint — from fi
 [Agent Evaluation in FDE Sprints](../Agent-Evaluation/agent-evaluation-76db9f7.md) — Agent Evaluation in FDE Sprints
 
 </td>
-<td valign="top">
-
-§11.3 Test case DSL; §11.5 Quality Flywheel (sprint weeks); §11.7 Online evaluation in production; §11.8 Evaluation dimensions checklist
+<td valign="top"> Test case DSL; Quality Flywheel (sprint weeks); Online evaluation in production; Evaluation dimensions checklist
 
 </td>
 </tr>
@@ -334,9 +314,7 @@ How do we ensure customer organizations are actually able to adopt and sustain t
 [Customer Enablement and Adoption](../Customer-Enablement/customer-enablement-05fedcc.md) — Customer Enablement & Adoption
 
 </td>
-<td valign="top">
-
-§12.3 Adoption Strategy lifecycle; §12.4 Gradual release (4 stages); §12.5 Role-based training (7 audiences); §12.6 Enablement readiness checklist
+<td valign="top"> Adoption Strategy lifecycle; Gradual release (4 stages); Role-based training (7 audiences); Enablement readiness checklist
 
 </td>
 </tr>
@@ -726,7 +704,7 @@ All designs in this concept operate within three non-negotiable constraints.
 
 **Strong Runtime Governance Is Required — the Mechanism Depends on the Axis-2 Runtime**
 
-For agents built low-code in Joule Studio 2.0 on SMJ, SAP's BAIP managed agent runtime provides governance automatically: security, observability, tenant isolation, and OpenTelemetry-based telemetry are built into the harness. For BYOA agents on the customer's BTP subaccount, the same governance goals apply but are achieved through team-configured BTP infrastructure (Cloud Foundry or Kyma), with the FDE team responsible for wiring auth, observability, and security controls; the agent is surfaced in SMJ through outbound A2A registration. **GA is phased, not binary**: the SMJ orchestrator is GA (since 2026-06-01), the Joule Studio 2.0 build environment is in phased GA, the managed custom-agent runtime is EAC-gated (free through Dec 2026, not broadly GA), and bidirectional A2A is transitional/not GA. Guidance for engagements starting now: architect the BYOA + outbound-A2A path (functional today) and treat the full Joule Studio 2.0 managed runtime plus bidirectional A2A as an H1 2027 target (see [CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) section 6.8 for the full decision guide). In both runtimes, BAIP is structured around three internal layers: a **Context layer** (the SAP Knowledge Graph with 7M+ data fields, unified across SAP and non-SAP systems), a **Build layer** (Joule Studio), and a **Governance layer** (SAP AI Agent Hub). The designs in this document operate across all three. ([SAP Sapphire 2026](https://news.sap.com/2026/05/sap-sapphire-sap-unveils-autonomous-enterprise/))
+For agents built low-code in Joule Studio 2.0 on SMJ, SAP's BAIP managed agent runtime provides governance automatically: security, observability, tenant isolation, and OpenTelemetry-based telemetry are built into the harness. For BYOA agents on the customer's BTP subaccount, the same governance goals apply but are achieved through team-configured BTP infrastructure (Cloud Foundry or Kyma), with the FDE team responsible for wiring auth, observability, and security controls; the agent is surfaced in SMJ through outbound A2A registration. **GA is phased, not binary**: the SMJ orchestrator is GA (since 2026-06-01), the Joule Studio 2.0 build environment is in phased GA, the managed custom-agent runtime is EAC-gated (free through Dec 2026, not broadly GA), and bidirectional A2A is transitional/not GA. Guidance for engagements starting now: architect the BYOA + outbound-A2A path (functional today) and treat the full Joule Studio 2.0 managed runtime plus bidirectional A2A as an H1 2027 target (see [CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) for the full decision guide). In both runtimes, BAIP is structured around three internal layers: a **Context layer** (the SAP Knowledge Graph with 7M+ data fields, unified across SAP and non-SAP systems), a **Build layer** (Joule Studio), and a **Governance layer** (SAP AI Agent Hub). The designs in this document operate across all three. ([SAP Sapphire 2026](https://news.sap.com/2026/05/sap-sapphire-sap-unveils-autonomous-enterprise/))
 
 **Human-in-the-Loop Is the Default**
 
@@ -825,7 +803,7 @@ Can AI Core Extended be provisioned in the customer's BTP subaccount?
 </td>
 <td valign="top">
 
-Not available in the customer's region → GenAI hub access blocked; sovereign model gateway required ([Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.13)
+Not available in the customer's region → GenAI hub access blocked; sovereign model gateway required ([Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md))
 
 </td>
 </tr>
@@ -842,7 +820,7 @@ Does BAIP (Business AI Platform) / SMJ cover the customer's BTP region?
 </td>
 <td valign="top">
 
-SMJ not available in-region → customer-managed (CMJ) orchestrator + BYOA runtime required; confirm per [CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) §6.8
+SMJ not available in-region → customer-managed (CMJ) orchestrator + BYOA runtime required; confirm per [CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md)
 
 </td>
 </tr>
@@ -910,7 +888,7 @@ Is this a sovereign or regulated deployment (CN40, NS2, KSA)?
 </td>
 <td valign="top">
 
-Sovereign deployment → confirm BAIP/Joule availability per [Security and Data Protection](../Security-and-Data-Protection/security-and-data-protection-90b7501.md) §3.12 before sprint commit
+Sovereign deployment → confirm BAIP/Joule availability per [Security and Data Protection](../Security-and-Data-Protection/security-and-data-protection-90b7501.md) before sprint commit
 
 </td>
 </tr>
@@ -920,7 +898,7 @@ If three or more checks are unresolved at the end of Discovery, escalate to the 
 
 **The AI Golden Path Defines Mandatory Requirements for All Production Agents**
 
-SAP's AI Golden Path (v1.2, July 2026) is the authoritative guide for AI development across SAP, CIS, and FDE contexts. It specifies 14 mandatory Technical Requirements (TR1–TR14) that every production agent must satisfy before commercial release — see [Production Operations](../Production-Operations/production-operations-edd9e33.md) section 8.10 for the full checklist. It also mandates specific platforms (BAIP, AppFND, Agent Gateway, Task Center for HITL) and includes a CTO-level directive: classification and regression tasks on tabular data must start with SAP's RPT-1 model before any LLM-based approach is considered. The Golden Path further defines an **approach-first** principle: before designing a custom agent, confirm that none of the following simpler solutions can address the use case — (1) rule-based/deterministic code or a SAP service, (2) tabular ML via RPT-1, (3) GenAI Hub orchestration without autonomous tool use, (4) a Joule skill in the Agent Harness. A custom code-based agent is the right answer at step 5 only. FDE sprint scoping should challenge the agent assumption explicitly at the Discovery phase.
+SAP's AI Golden Path (v1.2, July 2026) is the authoritative guide for AI development across SAP, CIS, and FDE contexts. It specifies 14 mandatory Technical Requirements (TR1–TR14) that every production agent must satisfy before commercial release — see [Production Operations](../Production-Operations/production-operations-edd9e33.md) for the full checklist. It also mandates specific platforms (BAIP, AppFND, Agent Gateway, Task Center for HITL) and includes a CTO-level directive: classification and regression tasks on tabular data must start with SAP's RPT-1 model before any LLM-based approach is considered. The Golden Path further defines an **approach-first** principle: before designing a custom agent, confirm that none of the following simpler solutions can address the use case — (1) rule-based/deterministic code or a SAP service, (2) tabular ML via RPT-1, (3) GenAI Hub orchestration without autonomous tool use, (4) a Joule skill in the Agent Harness. A custom code-based agent is the right answer at step 5 only. FDE sprint scoping should challenge the agent assumption explicitly at the Discovery phase.
 
 **RPT-1 Approach-First Assessment — Discovery Questions**
 
@@ -1034,7 +1012,7 @@ Use cases centered on planning, explanation, or cross-system coordination requir
 </tr>
 </table>
 
-**Decision rule**: if the answers point to RPT-1, use RPT-1 for the structured prediction sub-task and wrap it as a deterministic tool in the agent's tool set (the agent calls the RPT-1 model as one of its Layer 2 reference services — see [Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) §4.3). Do not replace RPT-1 with an LLM for tabular tasks; this is a hard Golden Path requirement, not a suggestion.
+**Decision rule**: if the answers point to RPT-1, use RPT-1 for the structured prediction sub-task and wrap it as a deterministic tool in the agent's tool set (the agent calls the RPT-1 model as one of its Layer 2 reference services — see [Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md)). Do not replace RPT-1 with an LLM for tabular tasks; this is a hard Golden Path requirement, not a suggestion.
 
 
 <a name="loio81672c4cbb4d4a58b10a7856e6fbdd40__section_cis_reference_implementation"/>
@@ -1136,9 +1114,148 @@ Design questions that require legal, product, or domain expert input before this
 
 A structured critical review of the concept — covering unverified platform assumptions, internal tensions, methodological gaps, and missing elements — is in concept-critique.md. The critique's resolution status is maintained in that document: findings addressed in the chapters, findings requiring external verification, and findings accepted as-is.
 
+
+
+<a name="loio81672c4cbb4d4a58b10a7856e6fbdd40__section_ekx_arch"/>
+
+## SAP Knowledge Graph — Verified Architecture Components
+
+The following components are verified in the SAP Enterprise Knowledge Graph (EKX) as active SAP products and capabilities that underpin the CIS Industry AI agent delivery architecture.
+
+**Architecture Components (EKX-Verified)**
+
+
+<table>
+<tr>
+<th valign="top">
+
+Component
+
+</th>
+<th valign="top">
+
+EKX Classification
+
+</th>
+<th valign="top">
+
+Role in Agent Architecture
+
+</th>
+</tr>
+<tr>
+<td valign="top">
+
+**Joule AI Agent**
+
+</td>
+<td valign="top">
+
+Solution Capability — Build, deploy, customize, and manage Joule agents
+
+</td>
+<td valign="top">
+
+End-user interaction layer; custom agents registered via A2A and surfaced as Joule Assistants in Joule Work
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**Joule Studio**
+
+</td>
+<td valign="top">
+
+Solution Capability — Lead Agentic AI Development with Agent Builder in Joule Studio
+
+</td>
+<td valign="top">
+
+Low-code and CLI build environment for custom agents; managed runtime handles BTP provisioning, auth, and observability automatically
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**SAP AI Core**
+
+</td>
+<td valign="top">
+
+Software Product — SAP AI Core (SAP BTP)
+
+</td>
+<td valign="top">
+
+Model serving via generative AI hub; agent evaluation (aeval) for offline CI and online production monitoring; orchestration deployment
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**SAP AI Agent Hub**
+
+</td>
+<td valign="top">
+
+Software Product Component — via SAP LeanIX
+
+</td>
+<td valign="top">
+
+Agent registry and governance review; enterprise architecture data for all deployed agents, MCP servers, and AI models; verification and compliance tracking
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**SAP Task Center**
+
+</td>
+<td valign="top">
+
+Software Product Component — SAP Task Center (SAP BTP)
+
+</td>
+<td valign="top">
+
+Human-in-the-loop approval and task management; mandatory escalation mechanism for high-stakes agent decisions (`sapTaskCenter`)
+
+</td>
+</tr>
+<tr>
+<td valign="top">
+
+**BAIP Managed Runtime**
+
+</td>
+<td valign="top">
+
+SAP Business AI Platform — Context, Build, and Governance layers
+
+</td>
+<td valign="top">
+
+Provides security, observability, tenant isolation, and OpenTelemetry telemetry for all agents; structured as Context layer (SAP Knowledge Graph, 7M+ fields), Build layer (Joule Studio), and Governance layer (SAP AI Agent Hub)
+
+</td>
+</tr>
+</table>
+
 **Related Information**  
 
 
+
+
+[SAP AI Agent Hub](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/8ebd704d35a746c180af003db1f5acb0.html "Introduction to SAP AI Agent Hub, its benefits, and core capabilities.") :arrow_upper_right:
+[Code-Based Agents (Bring Your Own Agent)](https://help.sap.com/docs/JOULE/ba88d1ec6a1b442098863d577c19b0c0/2f9701e60fd24e948c2c74fe9e55ce23.html "How to register a custom code-based agent (BYOA) to Joule via A2A.") :arrow_upper_right:
+[Transitioning from Customer-Managed Joule](https://help.sap.com/docs/JOULE_WORK/621104a90a01407fbb2d1613db39a54d/ed5033369d554472b601504b33d10e2a.html "Transition from CMJ to SAP-managed provisioning to access Joule Work and all current Joule innovations.") :arrow_upper_right:
+[Joule Studio — Glossary](https://help.sap.com/docs/JOULESTUDIO/7e496fe6f81f4975aec07d9c1cbd2aef/1e214183c85c4e4faff59a96c724f4fb.html "Key concepts for Joule Studio: custom agents, managed runtime, SAP Business AI Platform.") :arrow_upper_right:
 [Context Layer Overview](../context-layer-overview-fb2fc1c.md)
 
 [Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md)

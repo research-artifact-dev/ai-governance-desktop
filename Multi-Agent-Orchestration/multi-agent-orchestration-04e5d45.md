@@ -222,7 +222,7 @@ Integration testing with multi-agent routing can proceed in a SAP-managed test t
 </tr>
 </table>
 
-Confirm ORD registration completion as a pre-Development gate item among the Discovery deliverables (see §7.8).
+Confirm ORD registration completion as a pre-Development gate item among the Discovery deliverables (see).
 
 
 <a name="loio04e5d4514b1a41c6959f295d83ead275__section_topology_options"/>
@@ -647,7 +647,7 @@ If node on Worker A's result; conditional sapAgent call for Worker B
 -   `"execution": "sequential"` — agents execute in order, each receiving the output of the previous. Use when agent B depends on agent A's result.
 -   `"execution": "parallel"` — agents execute simultaneously and results are merged. Use for independent sub-tasks that can be dispatched in parallel.
 
-The orchestration supervisor reads the declared execution mode from the spec to determine routing behaviour at runtime. A spec that omits execution mode requires manual runtime configuration and is treated as a spec integrity failure during the post-build eval scorecard (Category A; the 6-category A–F scorecard is defined in [Agent Evaluation in FDE Sprints](../Agent-Evaluation/agent-evaluation-76db9f7.md) §11.4).
+The orchestration supervisor reads the declared execution mode from the spec to determine routing behaviour at runtime. A spec that omits execution mode requires manual runtime configuration and is treated as a spec integrity failure during the post-build eval scorecard (Category A; the 6-category A–F scorecard is defined in [Agent Evaluation in FDE Sprints](../Agent-Evaluation/agent-evaluation-76db9f7.md)).
 
 ### Recommended Orchestration Stack
 
@@ -823,7 +823,7 @@ The post-build eval scorecard (Category D) validates routing description quality
 > ### Note:  
 > **Delivery path — updated November 2026.** Delivery decomposes into two *orthogonal* axes — do not bundle them as a single "CMJ/BYOA" choice:
 > 
-> **Orchestrator / Joule activation (Axis 1): SMJ always** for new engagements. SAP-Managed Joule ("THE BOX", GA 2026-06-01) is the default and the only activation path receiving new features. **CMJ is legacy/deprecated** — a migration target, not a delivery choice (see §5.13).
+> **Orchestrator / Joule activation (Axis 1): SMJ always** for new engagements. SAP-Managed Joule ("THE BOX", GA 2026-06-01) is the default and the only activation path receiving new features. **CMJ is legacy/deprecated** — a migration target, not a delivery choice (see).
 > 
 > **Custom-agent runtime (Axis 2):** one of two standard runtimes, both registering to the SMJ orchestrator via A2A — neither is a fallback: *Joule Studio 2.0 (low-code, SAP-managed)*: build multiple agents in Joule Studio 2.0; each integrates into Joule Work automatically, with intent-based routing handled by the Joule platform. *BYOA (pro-code, customer BTP subaccount)*: bundle multiple capabilities in one `_joule-hub/da.sapdas.yaml`; each agent runs on BTP with its own A2A endpoint and capability bundle and registers to SMJ via A2A. This is the **standard** runtime for productization-intent FDE agents — not a fallback.
 > 
@@ -838,11 +838,11 @@ The post-build eval scorecard (Category D) validates routing description quality
 
 ## Quality Framework Extension for Multi-Agent Graphs
 
-The three-dimension quality framework ([Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md), section 1.2) extends to multi-agent with additional considerations at each level.
+The three-dimension quality framework ([Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md), ) extends to multi-agent with additional considerations at each level.
 
 ### Per-Worker Quality
 
-Each worker agent retains its own self-verification ([Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md) section 1.4.3–1.4.4) and, in Topology 2/3, its own supervisor quality relay. The per-worker quality design is identical to the single-agent case.
+Each worker agent retains its own self-verification ([Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md) –1.4.4) and, in Topology 2/3, its own supervisor quality relay. The per-worker quality design is identical to the single-agent case.
 
 ### Cross-Worker Consistency Verification
 
@@ -1029,7 +1029,7 @@ Each worker agent has its own BAIP application registration with its own scoped 
 
 ### PII in Inter-Agent Messages
 
-If Worker A produces output that contains PII (Personally Identifiable Information) and passes it to the orchestrator, the orchestrator must apply PII masking before including that data in Worker B's context. PII masking at the `sapOrchestration` node level ([Security and Data Protection](../Security-and-Data-Protection/security-and-data-protection-90b7501.md) section 3.6) only masks data before LLM calls — it does not automatically mask data in `customContext` payloads passed between agents.
+If Worker A produces output that contains PII (Personally Identifiable Information) and passes it to the orchestrator, the orchestrator must apply PII masking before including that data in Worker B's context. PII masking at the `sapOrchestration` node level ([Security and Data Protection](../Security-and-Data-Protection/security-and-data-protection-90b7501.md) ) only masks data before LLM calls — it does not automatically mask data in `customContext` payloads passed between agents.
 
 **Design rule**: orchestrators that aggregate outputs from multiple workers must apply data minimization — pass to each downstream worker only the fields that worker needs, not the full output from prior workers.
 
@@ -1446,6 +1446,10 @@ All MCP servers in the topology must be registered and verified in AI Agent Hub 
 **Related Information**  
 
 
+
+
+[Code-Based Agents (Bring Your Own Agent)](https://help.sap.com/docs/JOULE/ba88d1ec6a1b442098863d577c19b0c0/2f9701e60fd24e948c2c74fe9e55ce23.html "How to register a custom code-based agent (BYOA) to Joule via A2A.") :arrow_upper_right:
+[SAP AI Agent Hub](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/8ebd704d35a746c180af003db1f5acb0.html "Introduction to SAP AI Agent Hub, its benefits, and core capabilities.") :arrow_upper_right:
 [The Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md)
 
 [Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md)

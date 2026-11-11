@@ -187,19 +187,19 @@ Evaluated; for Delivery Intelligence (EP-14)
 
 ## Touchpoints with the Agent Development Concept
 
-### Token Efficiency (L1 Context Loading)
+### [Token Efficiency in Industry AI Delivery](Token-Efficiency/token-efficiency-47721ff.md) — Token Efficiency (L1 Context Loading)
 
-The CIS KG as MCP server is a direct implementation of the L1 mechanism: instead of bulk-loading CIS project context into every agent session, an FDE engineer's agent queries the KG on demand — pulling only the capability patterns relevant to the current engagement phase. This reduces AI Unit cost per session and is the most immediate efficiency win once the productive CISEKN endpoint is live. The MCP server belongs in `apm.yml` of the CIS Starter Kit ([Reusable Components and Reference Implementations](Reusable-Components/reusable-components-cb60e89.md) §9.4). With Cortex as the primary data source, the query results include structured AI patterns and technology stack fields — enabling finer-grained L1 context selection than free-text descriptions alone.
+The CIS KG as MCP server is a direct implementation of the L1 mechanism: instead of bulk-loading CIS project context into every agent session, an FDE engineer's agent queries the KG on demand — pulling only the capability patterns relevant to the current engagement phase. This reduces AI Unit cost per session and is the most immediate efficiency win once the productive CISEKN endpoint is live. The MCP server belongs in `apm.yml` of the CIS Starter Kit ([Reusable Components and Reference Implementations](Reusable-Components/reusable-components-cb60e89.md)). With Cortex as the primary data source, the query results include structured AI patterns and technology stack fields — enabling finer-grained L1 context selection than free-text descriptions alone.
 
-### Reusable Components & CIS Starter Kit
+### [Reusable Components and Reference Implementations](Reusable-Components/reusable-components-cb60e89.md) — Reusable Components & CIS Starter Kit
 
 The Context Layer is the runtime data source behind capability reuse. [Reusable Components and Reference Implementations](Reusable-Components/reusable-components-cb60e89.md) defines the three-layer reusability stack (deploy as-is / parameterize / engagement-specific) — the KG is what makes the "deploy as-is" tier discoverable. An FDE architect can query *"has CIS built an Order-to-Cash agent for automotive?"* before deciding which tier applies. The MCP server is a Starter Kit component. Cortex's `ai_patterns`, `sap_technologies`, and `iai_stack_layers` fields make these queries structurally answerable once Cortex data is ingested into the KG.
 
 ### [Reusable Components and Reference Implementations](Reusable-Components/reusable-components-cb60e89.md) / [Token Efficiency in Industry AI Delivery](Token-Efficiency/token-efficiency-47721ff.md) — CIS FDE Project Scaffold (Shared Dependency)
 
-Both projects depend on a standard that doesn't exist yet: a consistent CIS FDE project structure with defined file conventions and metadata. The Context Layer needs it to parse delivery repos for capability patterns (Phase 2). The Agent Development project needs it to attribute AI Unit costs to specific engagements ([Token Efficiency in Industry AI Delivery](Token-Efficiency/token-efficiency-47721ff.md) §10.5 "cost per correct outcome"). This is a T&O-owned workstream that gates both.
+Both projects depend on a standard that doesn't exist yet: a consistent CIS FDE project structure with defined file conventions and metadata. The Context Layer needs it to parse delivery repos for capability patterns (Phase 2). The Agent Development project needs it to attribute AI Unit costs to specific engagements ([Token Efficiency in Industry AI Delivery](Token-Efficiency/token-efficiency-47721ff.md) "cost per correct outcome"). This is a T&O-owned workstream that gates both.
 
-### Agent Evaluation (aeval / Online Eval)
+### [Agent Evaluation in FDE Sprints](Agent-Evaluation/agent-evaluation-76db9f7.md) — Agent Evaluation (aeval / Online Eval)
 
 Once CIS-built agents query the EKN KG at runtime, those KG query calls appear in MLflow production traces. The Context Layer becomes observable through the same `aeval` online evaluation pipeline — KG query cost, frequency by engagement, and pattern of queries are all signals for evaluating agent grounding quality.
 
@@ -217,6 +217,10 @@ The Context Layer is the **CIS-specific extension of the Foundation Layer's cont
 **Related Information**  
 
 
+
+
+[SAP AI Agent Hub](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/8ebd704d35a746c180af003db1f5acb0.html "Introduction to SAP AI Agent Hub, its benefits, and core capabilities.") :arrow_upper_right:
+[AI Agent Discovery — SAP AI Agent Hub](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/cd40550e6bc64547a0915446e108a472.html "Discover AI agents, MCP servers, and AI models and add them to your governed inventory.") :arrow_upper_right:
 [Introduction: Why Agent Governance Matters for Industry AI](Introduction/introduction-81672c4.md)
 
 [Reusable Components](Reusable-Components/reusable-components-cb60e89.md)

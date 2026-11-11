@@ -2,6 +2,7 @@
 
 # Customer Enablement and Adoption
 
+This chapter covers the Enable track — the mandatory parallel workstream that ensures agents are not only built and operated, but actually adopted. It defines the Adoption Strategy artifact, the gradual release of responsibility model, role-based training, and the enablement readiness checklist required before productization handover.
 
 
 
@@ -1710,6 +1711,10 @@ First 30 days: weekly cadence; 30-day review: technical stability; 60-day: adopt
 **Related Information**  
 
 
+
+
+[AI Governance — SAP LeanIX](https://help.sap.com/docs/LEANIX/72d375467c1e4dcb872dfa2998b6328d/275887e57a441014876a9243fb67f92b.html "Implement AI governance practices in SAP LeanIX.") :arrow_upper_right:
+[Secure and Govern — SAP AI Agent Hub](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/3ea62b45d7f64a8aab15321424ffb37c.html "Verify AI assets against governance criteria and build a verified inventory.") :arrow_upper_right:
 [Joule Studio Overview](https://help.sap.com/docs/JOULESTUDIO/7e496fe6f81f4975aec07d9c1cbd2aef/36d3e974446844a1b0ffb7af8fa9446c.html)
 
 [SAP AI Agent Hub — Plan and Build](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/e2a29b0c422e4aceadee658f4bbab71b.html)

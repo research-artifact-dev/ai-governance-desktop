@@ -50,7 +50,7 @@ The CA approval gate requires Shardul Vikram's sign-off and is not a routine app
 
 **Context:**
 
-[Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) (Precision Guardrails), section 4.6 includes a table of illustrative thresholds for the Layer 3 human approval gate — the point above which an agent's numerical output requires explicit human sign-off before write-back. The table covers five Industry AI domains:
+[Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) (Precision Guardrails), includes a table of illustrative thresholds for the Layer 3 human approval gate — the point above which an agent's numerical output requires explicit human sign-off before write-back. The table covers five Industry AI domains:
 
 **Table: Illustrative Layer 3 Human Approval Thresholds**
 
@@ -347,7 +347,7 @@ Include server info and tool details in response
 </tr>
 </table>
 
-**Impact on the concept:** [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.2.3 description has been corrected. The original claim *"the node loads available tools from the connected SAP system at runtime"* was inaccurate. Tool discovery is a design-time activity in Joule Studio. At runtime, every tool call is deterministic. This aligns with the design rule already in the chapter (hardcode tool calls for deterministic validation flows) — that rule is now the universal rule, not a special case.
+**Impact on the concept:** [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) description has been corrected. The original claim *"the node loads available tools from the connected SAP system at runtime"* was inaccurate. Tool discovery is a design-time activity in Joule Studio. At runtime, every tool call is deterministic. This aligns with the design rule already in the chapter (hardcode tool calls for deterministic validation flows) — that rule is now the universal rule, not a special case.
 
 **Timeout note:** The `sapMcpClient` timeout default (30s) is significantly shorter than `sapAgent` (180s). For MCP tool calls that hit SAP backend systems with non-trivial processing time, the timeout must be explicitly set — otherwise the workflow will fail silently on calls that would succeed with more time.
 
@@ -491,7 +491,7 @@ Build Code's CI/CD provides a **Compliance stage** that accepts additional comma
 
 **Impact on the concept:**
 
-[Security and Data Protection](../Security-and-Data-Protection/security-and-data-protection-90b7501.md) §3.3.3 should be updated: the "SAP Build Code may include built-in scanning" option is incorrect — there is no built-in SCA/SAST. The section should note that external tools are required, with the Compliance stage integration hook as the recommended path.
+[Security and Data Protection](../Security-and-Data-Protection/security-and-data-protection-90b7501.md) should be updated: the "SAP Build Code may include built-in scanning" option is incorrect — there is no built-in SCA/SAST. The section should note that external tools are required, with the Compliance stage integration hook as the recommended path.
 
 > ### Note:  
 > Q6–Q9 were consolidated into other questions during earlier reviews and are intentionally not reused; the numbering jumps from Q5 to Q10.
@@ -505,7 +505,7 @@ Build Code's CI/CD provides a **Compliance stage** that accepts additional comma
 
 **Context:**
 
-[CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) (CIS CoE Operations Model), section 6.2 describes two deployment topologies. Topology B is the SAP-managed tenant model: the agent runs in a SAP-managed BAIP environment and SAP/CIS is the operator. The concept notes that CIS operational responsibility is higher in this topology — because SAP operates the BAIP environment, CIS carries responsibility for both the platform and the agents running on it.
+[CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) (CIS CoE Operations Model), describes two deployment topologies. Topology B is the SAP-managed tenant model: the agent runs in a SAP-managed BAIP environment and SAP/CIS is the operator. The concept notes that CIS operational responsibility is higher in this topology — because SAP operates the BAIP environment, CIS carries responsibility for both the platform and the agents running on it.
 
 However, the concept does not specify:
 
@@ -533,7 +533,7 @@ Before this concept is used in a customer engagement involving a SAP-managed ten
 
 **Context:**
 
-[CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) (CIS CoE Operations Model), section 6.5 describes an EAC support model based on two phases: Phase 1 is led by the development team (P&E), Phase 2 transitions to CS&D once ticket volume and active customer count exceed a threshold.
+[CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) (CIS CoE Operations Model), describes an EAC support model based on two phases: Phase 1 is led by the development team (P&E), Phase 2 transitions to CS&D once ticket volume and active customer count exceed a threshold.
 
 This description is sourced from the *FDE Operating Model at Scale* document (Version 1.0, October 2025). That document predates the July 1, 2026 organizational changes that:
 
@@ -551,7 +551,7 @@ The October 2025 document describes P&E as the team leading FDE execution and Ph
 
 **Practical implication:**
 
-[CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) §6.4 uses this model to define when the CIS CoE operating rhythm kicks in ("from Phase 2 onward"). If the organizational model has changed, the phase boundary may be different, which affects how FDE engagements should plan the support handover.
+[CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) uses this model to define when the CIS CoE operating rhythm kicks in ("from Phase 2 onward"). If the organizational model has changed, the phase boundary may be different, which affects how FDE engagements should plan the support handover.
 
 **Related:** [Open Questions Q10](open-questions-a12bf85.md) — operational mandate for Topology B
 
@@ -678,7 +678,7 @@ JSON
 </td>
 <td valign="top">
 
-Additional context passed to the agent — relevant to [Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md) §7.6 authorization scope discussion
+Additional context passed to the agent — relevant to [Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md) authorization scope discussion
 
 </td>
 </tr>
@@ -706,7 +706,7 @@ Max 300,000ms (5 min); applies in blocking mode
 </tr>
 </table>
 
-**Finding:** The supervisor pattern's worker-supervisor communication model ([Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.4.1) is architecturally sound. The `blocking=false` + `callbackUrl` pattern is a first-class feature of the `sapAgent` node, not an assumption. The concept description in [Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) §2.4.1 is accurate.
+**Finding:** The supervisor pattern's worker-supervisor communication model ([Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md)) is architecturally sound. The `blocking=false` + `callbackUrl` pattern is a first-class feature of the `sapAgent` node, not an assumption. The concept description in [Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md) is accurate.
 
 **Secondary finding:** The `timeout` default (180s) and max (300s) are relevant context for the 60-second Joule UI timeout noted in the CMJ/BYOA cheat sheet. The `sapAgent` node itself supports much longer execution windows than the Joule conversational interface does.
 
@@ -739,7 +739,7 @@ Cloud ALM Pull APIs (`/api/calm-traces/v1/traces`, `/api/calm-metrics/v1/metrics
 5.  **At query time**: Workflow B uses the same `serviceId` to query metrics back via the `hm` provider.
 
 **Key deployment constraint:**
-The `serviceId` is **tenant-specific and opaque** — it cannot be hardcoded in the workflow. It must be injected at deployment time via `{{$env.CALM_SERVICE_ID}}` (environment variable on Kyma/self-hosted) or via trigger-payload config (`{{$json.config.calmServiceId}}`). This aligns with the §8.7 environment-agnostic pattern.
+The `serviceId` is **tenant-specific and opaque** — it cannot be hardcoded in the workflow. It must be injected at deployment time via `{{$env.CALM_SERVICE_ID}}` (environment variable on Kyma/self-hosted) or via trigger-payload config (`{{$json.config.calmServiceId}}`). This aligns with the environment-agnostic pattern.
 
 **Conclusion:**
 Workflow B's approach is architecturally valid and implementable — but requires a one-time Cloud ALM LMS registration step as part of the deployment runbook. The concept's HTTP Request node can call Cloud ALM's `hm` metrics provider. The concept should document this registration prerequisite in the production handover checklist ([Production Operations](../Production-Operations/production-operations-edd9e33.md)).
@@ -761,9 +761,9 @@ A `promptTemplate` source value is referenced in the node's `displayOptions` con
 
 **Impact on the concept:**
 
-[Production Operations](../Production-Operations/production-operations-edd9e33.md)'s prompt versioning model — store prompts in the Registry, reference by name, update without redeployment — is not currently achievable. The concept's §8.2 "Versioning in Joule Studio" section and §8.7 environment-specific configuration pattern both depend on this capability.
+[Production Operations](../Production-Operations/production-operations-edd9e33.md)'s prompt versioning model — store prompts in the Registry, reference by name, update without redeployment — is not currently achievable. The concept's "Versioning in Joule Studio" section and environment-specific configuration pattern both depend on this capability.
 
-**Current fallback approach** (documented in [Production Operations](../Production-Operations/production-operations-edd9e33.md) §8.2):
+**Current fallback approach** (documented in [Production Operations](../Production-Operations/production-operations-edd9e33.md)):
 
 -   Store prompt text as a workflow-level string parameter, configurable per environment via BAIP configuration rather than hardcoded in the node
 -   Maintain prompt text in the engagement Git repository alongside the workflow definition
@@ -973,7 +973,7 @@ No — static per deployment
 
 **Impact on the concept:**
 
-Chapters 4 §4.6 and 8 §8.7 reference `{{config.approval_threshold}}` as a "BAIP governance parameter store" enabling IT admins to adjust thresholds without redeployment. This pattern **does not exist** as described. The chapters need revision:
+Chapters 4 and 8 reference `{{config.approval_threshold}}` as a "BAIP governance parameter store" enabling IT admins to adjust thresholds without redeployment. This pattern **does not exist** as described. The chapters need revision:
 
 -   Replace `{{config.x}}` with `{{$json.config.x}}` (trigger-payload pattern) or `{{$vars.x}}` ($vars pattern)
 -   Acknowledge that true "change without redeployment" requires either the trigger-payload pattern (caller supplies config per invocation) or `$vars` (static, requires UI edit but no redeployment)
@@ -983,11 +983,11 @@ Chapters 4 §4.6 and 8 §8.7 reference `{{config.approval_threshold}}` as a "BAI
 
 ## Q16 — Can Hyperspace LLM Proxy Costs Be Tracked Per FDE Engagement or Project?
 
-**Status:** Partially answered — see [Token Efficiency in Industry AI Delivery](../Token-Efficiency/token-efficiency-47721ff.md), section 10.3 for full analysis and recommended approach. Structural solution (Option B) requires HAI proxy roadmap input; near-term workaround (Option C sidecar) is feasible without proxy changes.
+**Status:** Partially answered — see [Token Efficiency in Industry AI Delivery](../Token-Efficiency/token-efficiency-47721ff.md), for full analysis and recommended approach. Structural solution (Option B) requires HAI proxy roadmap input; near-term workaround (Option C sidecar) is feasible without proxy changes.
 
 **Context:**
 
-[Token Efficiency in Industry AI Delivery](../Token-Efficiency/token-efficiency-47721ff.md) (Token Efficiency), section 10.3 proposes build-time token efficiency measurement as an engagement-level practice. SAP's Token Consumption Governance Framework (live August 17, 2026) provides individual developer consumption tracking via the HAI proxy (Hyperspace LLM Proxy). The proxy has no project grouping today.
+[Token Efficiency in Industry AI Delivery](../Token-Efficiency/token-efficiency-47721ff.md) (Token Efficiency), proposes build-time token efficiency measurement as an engagement-level practice. SAP's Token Consumption Governance Framework (live August 17, 2026) provides individual developer consumption tracking via the HAI proxy (Hyperspace LLM Proxy). The proxy has no project grouping today.
 
 **Analysis summary (based on HAI proxy documentation review):**
 
@@ -1115,7 +1115,7 @@ The two-cost-stream assumption in the concept (build-time via Hyperspace, runtim
 
 **Context:**
 
-[Production Operations](../Production-Operations/production-operations-edd9e33.md) section 8.4 and [Token Efficiency in Industry AI Delivery](../Token-Efficiency/token-efficiency-47721ff.md) section 10.4 distinguish two cost streams:
+[Production Operations](../Production-Operations/production-operations-edd9e33.md) and [Token Efficiency in Industry AI Delivery](../Token-Efficiency/token-efficiency-47721ff.md) distinguish two cost streams:
 
 -   **Build-time (Hyperspace)**: tracks LLM token consumption for FDE engineers using Claude Code and coding tools; SAP-internal only
 -   **Runtime (AI Units)**: commercial billing unit for deployed Industry AI agents; visible in the customer's SAP subscription; measured per agent step at three tiers (Basic / Standard / Advanced)
@@ -1126,7 +1126,7 @@ The two-cost-stream assumption in the concept (build-time via Hyperspace, runtim
 
 2.  Is there any operator-side tool equivalent to Hyperspace for monitoring deployed agent token costs from SAP's perspective — outside of the customer-visible AI Units billing? For example, an SAP-internal view of AI Core usage across customer tenants, accessible to the operating CIS team?
 
-3.  The current concept assumes no such tool exists for runtime (SAP-internal only constraint). If a runtime equivalent exists, [Token Efficiency in Industry AI Delivery](../Token-Efficiency/token-efficiency-47721ff.md) §10.4 would need updating.
+3.  The current concept assumes no such tool exists for runtime (SAP-internal only constraint). If a runtime equivalent exists, [Token Efficiency in Industry AI Delivery](../Token-Efficiency/token-efficiency-47721ff.md) would need updating.
 
 **Practical implication:**
 
@@ -1308,18 +1308,18 @@ SAP AI Core / GenAI Hub not available in China BTP regions
 
 **Practical implication:**
 
-For Industry AI customer conversations in eu11, br10, in30, or China: **do not assume eu10/us10 model availability**. Build a region compatibility check into the onboarding flow ([Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.10 and [Agent Evaluation in FDE Sprints](../Agent-Evaluation/agent-evaluation-76db9f7.md) eval setup may need model substitutions requiring re-calibration).
+For Industry AI customer conversations in eu11, br10, in30, or China: **do not assume eu10/us10 model availability**. Build a region compatibility check into the onboarding flow ([Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) and [Agent Evaluation in FDE Sprints](../Agent-Evaluation/agent-evaluation-76db9f7.md) eval setup may need model substitutions requiring re-calibration).
 
 
 <a name="loioa12bf85b576b4a78a846573ed18cd202__section_q19"/>
 
-## Q19 — Is the Week-by-Week Build Sequence (§5.10) Realistic for a Standard FDE Sprint?
+## Q19 — Is the Week-by-Week Build Sequence () Realistic for a Standard FDE Sprint?
 
 **Status:** Open — needs review by FDE practitioners with active engagement experience
 
 **Context:**
 
-[Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) section 5.10 describes a 12-week build sequence: from scaffold in week 1 to production readiness in week 12. *(Note: §5.10 was restructured in the November 2026 Wave 2/3 pass into a Minimum-Viable / Full-Stack two-path sequence; this summary predates that and should be re-synced when Q19 is actioned.)* The sequence covers: environment setup, local agent scaffold, JS2.0/SMJ (default) or CMJ wiring, Workflow A (supervisor), Workflow B (telemetry), Workflow C (support relay), multi-agent patterns, TR1–TR14 compliance, and Enable track delivery.
+[Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) describes a 12-week build sequence: from scaffold in week 1 to production readiness in week 12. *(Note: was restructured in the November 2026 Wave 2/3 pass into a Minimum-Viable / Full-Stack two-path sequence; this summary predates that and should be re-synced when Q19 is actioned.)* The sequence covers: environment setup, local agent scaffold, JS2.0/SMJ (default) or CMJ wiring, Workflow A (supervisor), Workflow B (telemetry), Workflow C (support relay), multi-agent patterns, TR1–TR14 compliance, and Enable track delivery.
 
 **The specific uncertainty:**
 
@@ -1329,7 +1329,7 @@ Also: the sequence was originally designed with CMJ provisioning as a potential 
 
 **Practical implication:**
 
-A clarifying note in [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.10 about which items are mandatory (core agent + Workflow A + TR1–TR14 minimum) vs. optional (Workflow B, Workflow C, multi-agent) would make the build sequence more directly usable by FDE teams planning sprint scope. The JS2.0/SMJ default also simplifies the early environment setup steps (no manual CMJ provisioning, no manual Joule capability bundle) — reducing the risk of week 1 delays.
+A clarifying note in [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) about which items are mandatory (core agent + Workflow A + TR1–TR14 minimum) vs. optional (Workflow B, Workflow C, multi-agent) would make the build sequence more directly usable by FDE teams planning sprint scope. The JS2.0/SMJ default also simplifies the early environment setup steps (no manual CMJ provisioning, no manual Joule capability bundle) — reducing the risk of week 1 delays.
 
 **Who can answer this:** FDE practitioners with Joule Studio engagement experience; CIS T&O team.
 
@@ -1344,7 +1344,7 @@ A clarifying note in [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-st
 
 [Production Operations](../Production-Operations/production-operations-edd9e33.md) notes that in multi-agent deployments, rolling back one worker agent may break interface contracts with other agents if the rolled-back version produces different structured output than the version the other agents were designed to consume.
 
-The CIS T&O runbook ([CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) §6.11) should include a dependency map of inter-agent structured-output contracts. However, no concrete tooling for tracking these contracts exists in the current BAIP harness or Joule Studio environment.
+The CIS T&O runbook ([CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md)) should include a dependency map of inter-agent structured-output contracts. However, no concrete tooling for tracking these contracts exists in the current BAIP harness or Joule Studio environment.
 
 **The specific uncertainty:**
 
@@ -1361,6 +1361,10 @@ Until tooling exists, the CIS T&O operational runbook for multi-agent deployment
 **Related Information**  
 
 
+
+
+[SAP AI Agent Hub](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/8ebd704d35a746c180af003db1f5acb0.html "Introduction to SAP AI Agent Hub, its benefits, and core capabilities.") :arrow_upper_right:
+[Code-Based Agents (Bring Your Own Agent)](https://help.sap.com/docs/JOULE/ba88d1ec6a1b442098863d577c19b0c0/2f9701e60fd24e948c2c74fe9e55ce23.html "How to register a custom code-based agent (BYOA) to Joule via A2A.") :arrow_upper_right:
 [Proof of Concept Plan](../Proof-of-Concept-Plan/proof-of-concept-plan-b1c9aa0.md)
 
 [Joule Studio Overview](https://help.sap.com/docs/JOULESTUDIO/7e496fe6f81f4975aec07d9c1cbd2aef/36d3e974446844a1b0ffb7af8fa9446c.html)

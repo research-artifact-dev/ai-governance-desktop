@@ -749,6 +749,10 @@ Effective guidance = SMJ orchestrator default; BYOA/JS2.0 runtime by complexity;
 **Related Information**  
 
 
+
+
+[Code-Based Agents (Bring Your Own Agent)](https://help.sap.com/docs/JOULE/ba88d1ec6a1b442098863d577c19b0c0/2f9701e60fd24e948c2c74fe9e55ce23.html "How to register a custom code-based agent (BYOA) to Joule via A2A.") :arrow_upper_right:
+[Transitioning from Customer-Managed Joule](https://help.sap.com/docs/JOULE_WORK/621104a90a01407fbb2d1613db39a54d/ed5033369d554472b601504b33d10e2a.html "Transition from CMJ to SAP-managed provisioning to access Joule Work and all current Joule innovations.") :arrow_upper_right:
 [FDE Agent Engagement Playbook: Build, Operate, Enable — SAP CIS Edition](FDE-Agent-Engagement-Playbook/fde-agent-engagement-playbook-4e171c5.md)
 
 [FDE within SAP Industry AI — Overview](fde-overview-5826bc7.md)
