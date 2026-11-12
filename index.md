@@ -1,6 +1,9 @@
 # CIS Agent Development — Industry AI Concept
 
--   [Introduction: Why Agent Governance Matters for Industry AI](Introduction/introduction-81672c4.md)
+
+-   [SAP BTP Guidance Framework](SAP-BTP-Guidance-Framework/sap-btp-guidance-framework-27720e0.md)
+-   [Agent Development Concept](Agent-Development-Concept/agent-development-concept-870f31e.md)
+-   [Introduction](Introduction/introduction-81672c4.md)
     -   [CIS Context Layer Overview](context-layer-overview-fb2fc1c.md)
 -   [Agent Quality Framework](Agent-Quality-Framework/agent-quality-framework-4a9b908.md)
     -   [Agent Evaluation in FDE Sprints](Agent-Evaluation/agent-evaluation-76db9f7.md)

@@ -693,7 +693,7 @@ Until a sidecar or workspace feature is available, the manual fallback is: each 
 
 Once an Industry AI agent is in production in a customer's BAIP tenant, the token efficiency measurement shifts entirely to the BAIP-native observability stack:
 
--   **AI Units** (commercial): the per-Action billing model visible in the customer's SAP subscription. The contractual metering unit is **0.02 AI Units per Agent Action** (1 Agent Action = 1 LLM call + 1 simple tool invocation). [Production Operations](../Production-Operations/production-operations-edd9e33.md) section 8.4 covers the three-tier step model (Basic / Standard / Advanced at 0.005 / 0.010 / 0.025 AI Units per step) for detailed cost modelling; the 0.02/Action figure is the simplified contractual unit used for floor pricing submissions.
+-   **AI Units** (commercial): the per-Action billing model visible in the customer's SAP subscription. The contractual metering unit is **0.02 AI Units per Agent Action** (1 Agent Action = 1 LLM call + 1 simple tool invocation). [Production Operations](../Production-Operations/production-operations-edd9e33.md) covers the three-tier step model (Basic / Standard / Advanced at 0.005 / 0.010 / 0.025 AI Units per step) for detailed cost modelling; the 0.02/Action figure is the simplified contractual unit used for floor pricing submissions.
 
 -   **OpenTelemetry traces** (operational): per-invocation token counts from the generative AI hub, already collected by the BAIP harness automatically. [Production Operations](../Production-Operations/production-operations-edd9e33.md) sections 8.4–8.5 define the monitoring framework built on top of this signal.
 
@@ -777,7 +777,7 @@ Charged against the customer's BDC subscription
 
 These three dimensions cannot be consolidated into a single AI Units figure. When building the FDE value case, confirm which pools the customer has contracted capacity for — availability of BTPEA credits and BDC capacity units affects deployment feasibility independently of AI Units availability.
 
-For **Topology A deployments** (customer-managed tenant), access to runtime token data requires customer consent — the same consent required for operational monitoring generally. This is the Topology A data access constraint from [CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) section 6.4. Runtime efficiency optimization for Topology A agents cannot proceed without this consent in place.
+For **Topology A deployments** (customer-managed tenant), access to runtime token data requires customer consent — the same consent required for operational monitoring generally. This is the Topology A data access constraint from [CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) . Runtime efficiency optimization for Topology A agents cannot proceed without this consent in place.
 
 ### L0 at Agent Design Time
 
@@ -913,7 +913,7 @@ Beyond L0, several design choices at workflow build time directly affect runtime
 
 The supervisor pattern ([Supervisor Agent Pattern](../Supervisor-Agent-Pattern/supervisor-agent-pattern-16a4089.md)) has a token efficiency benefit that is not its primary purpose but is a practical gain: the supervisor intercepts output before write-back. If an agent has produced a mis-formed or off-range output after excessive token expenditure, the supervisor rejects it before it triggers a human approval flow — containing the cost of the failure to a single invocation rather than letting the error propagate into the human loop.
 
-Supervisor Workflow B (Telemetry Monitor, [Production Operations](../Production-Operations/production-operations-edd9e33.md) section 8.5) already monitors token anomalies as part of its scheduled monitoring cycle. The specific signals — per-invocation tokens vs. rolling baseline, runaway detection at 5× p99, daily budget threshold — are defined there. The supervisor design and the efficiency monitoring design are the same workflow.
+Supervisor Workflow B (Telemetry Monitor, [Production Operations](../Production-Operations/production-operations-edd9e33.md) ) already monitors token anomalies as part of its scheduled monitoring cycle. The specific signals — per-invocation tokens vs. rolling baseline, runaway detection at 5× p99, daily budget threshold — are defined there. The supervisor design and the efficiency monitoring design are the same workflow.
 
 
 <a name="loio47721ffb107243589985b18b1409daa9__section_quality_efficiency"/>
@@ -922,7 +922,7 @@ Supervisor Workflow B (Telemetry Monitor, [Production Operations](../Production-
 
 ### Token Cost as a Measurable Sub-Dimension of Tool Call Efficiency
 
-[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md) (section 1.2, Dimension 1) lists tool call efficiency as a technical quality metric: "Did the agent reach the goal with the minimum necessary tool calls?" Token cost makes this measurable in monetary terms.
+[Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md) (, Dimension 1) lists tool call efficiency as a technical quality metric: "Did the agent reach the goal with the minimum necessary tool calls?" Token cost makes this measurable in monetary terms.
 
 An agent that reaches the same business outcome with half the tool calls, half the context re-sent, and half the output verbosity is better — not just cheaper. It is also faster, less likely to hit context limits, and more predictable. Token efficiency is not in tension with quality; at the operational level, high token consumption is frequently a quality symptom:
 
@@ -1004,7 +1004,7 @@ Agent consuming tokens before recognizing it cannot complete the task
 </tr>
 </table>
 
-These signals are already detectable via Workflow B ([Production Operations](../Production-Operations/production-operations-edd9e33.md) section 8.5). Framing them as efficiency signals — not just cost signals — connects the telemetry monitoring to the quality framework.
+These signals are already detectable via Workflow B ([Production Operations](../Production-Operations/production-operations-edd9e33.md) ). Framing them as efficiency signals — not just cost signals — connects the telemetry monitoring to the quality framework.
 
 ### Goodhart's Law Warning
 
@@ -1059,7 +1059,7 @@ No FDE engagement has yet measured build-time token efficiency systematically. T
 
 ### Runtime Monitoring in Topology A Requires Customer Consent
 
-As noted in the Runtime Efficiency section above and in [CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) section 6.4, access to per-invocation runtime telemetry in Topology A (customer-managed tenant) requires the customer's explicit consent. The runtime efficiency design in this topic is complete — but it is not deployable in Topology A engagements until the consent question in Discovery has been resolved and the legal basis established.
+As noted in the Runtime Efficiency section above and in [CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) , access to per-invocation runtime telemetry in Topology A (customer-managed tenant) requires the customer's explicit consent. The runtime efficiency design in this topic is complete — but it is not deployable in Topology A engagements until the consent question in Discovery has been resolved and the legal basis established.
 
 
 <a name="loio47721ffb107243589985b18b1409daa9__section_quick_wins"/>
@@ -1142,7 +1142,7 @@ Low — design convention in sapOrchestration
 </td>
 <td valign="top">
 
-[Token Efficiency in Industry AI Delivery](token-efficiency-47721ff.md) §10.3; confirm TTL with [Production Operations](../Production-Operations/production-operations-edd9e33.md) §8.4 baseline
+[Token Efficiency in Industry AI Delivery](token-efficiency-47721ff.md); confirm TTL with [Production Operations](../Production-Operations/production-operations-edd9e33.md) baseline
 
 </td>
 </tr>
@@ -1179,7 +1179,7 @@ Low — APM setup
 </td>
 <td valign="top">
 
-[Token Efficiency in Industry AI Delivery](token-efficiency-47721ff.md) §10.3; [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.4 worker agent pattern
+[Token Efficiency in Industry AI Delivery](token-efficiency-47721ff.md); [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) worker agent pattern
 
 </td>
 </tr>
@@ -1216,7 +1216,7 @@ Low — process convention
 </td>
 <td valign="top">
 
-[Token Efficiency in Industry AI Delivery](token-efficiency-47721ff.md) §10.3; DTS spec-driven development pattern
+[Token Efficiency in Industry AI Delivery](token-efficiency-47721ff.md); DTS spec-driven development pattern
 
 </td>
 </tr>
@@ -1253,7 +1253,7 @@ Low-Medium — requires conscious workflow review
 </td>
 <td valign="top">
 
-[Token Efficiency in Industry AI Delivery](token-efficiency-47721ff.md) §10.4; [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.4 (already embedded in supervisor pattern)
+[Token Efficiency in Industry AI Delivery](token-efficiency-47721ff.md); [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) (already embedded in supervisor pattern)
 
 </td>
 </tr>
@@ -1290,7 +1290,7 @@ Low — configuration choice
 </td>
 <td valign="top">
 
-[Token Efficiency in Industry AI Delivery](token-efficiency-47721ff.md) §10.4; [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md) §5.4
+[Token Efficiency in Industry AI Delivery](token-efficiency-47721ff.md); [Joule Studio Build Map](../Joule-Studio-Build-Map/joule-studio-build-map-dcd2de0.md)
 
 </td>
 </tr>
@@ -1327,7 +1327,7 @@ Low — APM + CLAUDE.md setup
 </td>
 <td valign="top">
 
-[Token Efficiency in Industry AI Delivery](token-efficiency-47721ff.md) §10.3
+[Token Efficiency in Industry AI Delivery](token-efficiency-47721ff.md)
 
 </td>
 </tr>
@@ -1364,7 +1364,7 @@ Medium — initial setup; low thereafter
 </td>
 <td valign="top">
 
-[Token Efficiency in Industry AI Delivery](token-efficiency-47721ff.md) §10.3; [Reusable Components and Reference Implementations](../Reusable-Components/reusable-components-cb60e89.md) §9.4
+[Token Efficiency in Industry AI Delivery](token-efficiency-47721ff.md); [Reusable Components and Reference Implementations](../Reusable-Components/reusable-components-cb60e89.md)
 
 </td>
 </tr>
@@ -1401,7 +1401,7 @@ Medium — requires measurement instrumentation
 </td>
 <td valign="top">
 
-[Token Efficiency in Industry AI Delivery](token-efficiency-47721ff.md) §10.5; [Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md) §1.2
+[Token Efficiency in Industry AI Delivery](token-efficiency-47721ff.md); [Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md)
 
 </td>
 </tr>
@@ -1412,6 +1412,9 @@ Medium — requires measurement instrumentation
 **Related Information**  
 
 
+
+
+[Observe and Analyze — SAP AI Agent Hub](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/1fdc1df35d414cd6bf2ed15ec8a164f4.html "Monitor agent usage, measure business value, and analyze portfolio health.") :arrow_upper_right:
 [CIS Delivery Efficiency — Reusable Components and Reference Implementations](../Reusable-Components/reusable-components-cb60e89.md)
 
 [Production Operations](../Production-Operations/production-operations-edd9e33.md)

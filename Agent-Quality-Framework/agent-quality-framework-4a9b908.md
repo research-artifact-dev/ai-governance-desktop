@@ -283,8 +283,6 @@ G1–G4 readiness gates (entity completeness, goal coverage, actor-process bindi
 </td>
 <td valign="top">
 
-§1.3.0
-
 </td>
 <td valign="top">
 
@@ -327,7 +325,7 @@ aeval offline in traceless mode (output correctness + rule compliance from day 1
 </td>
 <td valign="top">
 
-[Agent Evaluation](../Agent-Evaluation/agent-evaluation-76db9f7.md) §11.7
+[Agent Evaluation](../Agent-Evaluation/agent-evaluation-76db9f7.md)
 
 </td>
 <td valign="top">
@@ -349,7 +347,7 @@ Development — Weeks 1–5
 </td>
 <td valign="top">
 
-[Agent Evaluation](../Agent-Evaluation/agent-evaluation-76db9f7.md) §11.4
+[Agent Evaluation](../Agent-Evaluation/agent-evaluation-76db9f7.md)
 
 </td>
 <td valign="top">
@@ -371,7 +369,7 @@ aeval offline with full trace-enabled metrics; eval suite ≥ 3 iterations; succ
 </td>
 <td valign="top">
 
-[Agent Evaluation](../Agent-Evaluation/agent-evaluation-76db9f7.md) §11.9
+[Agent Evaluation](../Agent-Evaluation/agent-evaluation-76db9f7.md)
 
 </td>
 <td valign="top">
@@ -393,7 +391,7 @@ Full aeval offline suite passes in CI; online eval active in EAC (Early Adopter 
 </td>
 <td valign="top">
 
-[Agent Evaluation](../Agent-Evaluation/agent-evaluation-76db9f7.md) §11.9
+[Agent Evaluation](../Agent-Evaluation/agent-evaluation-76db9f7.md)
 
 </td>
 <td valign="top">
@@ -415,7 +413,7 @@ Online eval active (aeval-online); anomaly detection baselines calibrated; super
 </td>
 <td valign="top">
 
-[Agent Evaluation](../Agent-Evaluation/agent-evaluation-76db9f7.md) §11.11
+[Agent Evaluation](../Agent-Evaluation/agent-evaluation-76db9f7.md)
 
 </td>
 <td valign="top">
@@ -437,7 +435,7 @@ Scale gate criteria met: Stage 3 independence + override rate + process KPI + qu
 </td>
 <td valign="top">
 
-Scale Gate §12.4
+Scale Gate
 
 </td>
 <td valign="top">
@@ -459,7 +457,7 @@ aeval online eval: statistical trend monitoring via CronJob; Workflow B anomaly 
 </td>
 <td valign="top">
 
-[Agent Evaluation](../Agent-Evaluation/agent-evaluation-76db9f7.md) §11.11
+[Agent Evaluation](../Agent-Evaluation/agent-evaluation-76db9f7.md)
 
 </td>
 <td valign="top">
@@ -481,7 +479,7 @@ Eval suite review; model suitability review; iteration pattern analysis
 </td>
 <td valign="top">
 
-[Production Operations](../Production-Operations/production-operations-edd9e33.md) §8.3 / [CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) §6.8
+[Production Operations](../Production-Operations/production-operations-edd9e33.md) / [CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md)
 
 </td>
 <td valign="top">
@@ -875,7 +873,7 @@ Three principles from the SAP AI Golden Path evaluation framework govern how eva
 
 Evaluation test cases are a **Week 0 sprint deliverable**, not something created after the agent is built. Define BDD-style test cases — given / when / then scenarios that describe exactly what the agent must do — before writing any workflow code. These test cases are the agent's specification. Scenario runs use the Joule Studio CLI's `joule test` (which executes your BDD feature files) or the Joule Studio editor Test button; pre-build validation uses the Solution Management CLI (`jl solution validate`); and the broader eval suite runs in CI via aeval throughout development.
 
-This is not optional: writing tests after the fact tests what the agent does, not what it should do. Retroactive test suites accumulate false coverage of edge cases the implementation happened to get right. Tests written first express business intent and become the ground truth for the Quality Flywheel (see [Agent Evaluation](../Agent-Evaluation/agent-evaluation-76db9f7.md) §11.5).
+This is not optional: writing tests after the fact tests what the agent does, not what it should do. Retroactive test suites accumulate false coverage of edge cases the implementation happened to get right. Tests written first express business intent and become the ground truth for the Quality Flywheel (see [Agent Evaluation](../Agent-Evaluation/agent-evaluation-76db9f7.md)).
 
 ### Test Onion — Layered Testing Strategy
 
@@ -957,9 +955,9 @@ Medium — validates final wiring
 
 The aeval layer is the most important investment. Tool-level tests confirm that connectors work; integration tests confirm deployment. Only the eval layer validates whether the agent is actually making correct decisions.
 
-### Evaluation Dimensions
+### 11 Evaluation Dimensions
 
-The SAP AI Golden Path defines a set of evaluation dimensions for comprehensive agent evaluation. **The canonical set — 11 dimensions with their priorities — is maintained in [Agent Evaluation](../Agent-Evaluation/agent-evaluation-76db9f7.md) §11.12 (Evaluation Dimensions Checklist); the table below matches it row-for-row.** Cover at minimum the High-priority dimensions before the Week 6 gate and all Medium-priority dimensions before production go-live.
+The SAP AI Golden Path defines a set of evaluation dimensions for comprehensive agent evaluation. **The canonical set — 11 dimensions with their priorities — is maintained in [Agent Evaluation](../Agent-Evaluation/agent-evaluation-76db9f7.md) (Evaluation Dimensions Checklist); the table below matches it row-for-row.** Cover at minimum the High-priority dimensions before the Week 6 gate and all Medium-priority dimensions before production go-live.
 
 **Table: 11 Evaluation Dimensions**
 
@@ -1497,7 +1495,7 @@ Identify the right processes and opportunities for AI agents; assess feasibility
 </td>
 <td valign="top">
 
-FDE Discovery phases (§1.3.0 readiness gates G1–G4; Project LightSpeed Stages 1–8)
+FDE Discovery phases ( readiness gates G1–G4; Project LightSpeed Stages 1–8)
 
 </td>
 </tr>
@@ -1564,6 +1562,10 @@ For FDE Discovery conversations, the four pillars translate directly: Agent Disc
 **Related Information**  
 
 
+
+
+[SAP AI Agent Hub](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/8ebd704d35a746c180af003db1f5acb0.html "Introduction to SAP AI Agent Hub, its benefits, and core capabilities.") :arrow_upper_right:
+[Observe and Analyze — SAP AI Agent Hub](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/1fdc1df35d414cd6bf2ed15ec8a164f4.html "Monitor agent usage, measure business value, and analyze portfolio health.") :arrow_upper_right:
 [Agent Evaluation in FDE Sprints](../Agent-Evaluation/agent-evaluation-76db9f7.md)
 
 [SAP AI Agent Hub — Plan and Build](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/e2a29b0c422e4aceadee658f4bbab71b.html "SAP AI Agent Hub Plan and Build documentation") :arrow_upper_right:

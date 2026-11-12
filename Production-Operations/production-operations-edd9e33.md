@@ -8,7 +8,8 @@ Production operations for Industry AI agents covers three core concerns that mus
 
 <a name="loioedd9e33b3f6c4879a3d8c0379eba47ca__section_what_this_chapter_covers"/>
 
-## What 
+## What This Chapter Covers
+
 The concept so far addresses quality, security, guardrails, and build patterns. What it does not yet address is what happens once an agent is in production and the FDE team has moved on. Three operational concerns arise in every long-running Industry AI deployment that the earlier chapters do not design for explicitly:
 
 1.  **Agent versioning and rollback**: agents evolve — prompts are updated, models change, thresholds are adjusted. When a version change degrades quality, how is the rollback executed, who authorizes it, and what happens to in-flight transactions?
@@ -2688,6 +2689,10 @@ When CALM is deployed: agent telemetry surfaced to customer and CSM via CALM; se
 **Related Information**  
 
 
+
+
+[Code-Based Agents (Bring Your Own Agent)](https://help.sap.com/docs/JOULE/ba88d1ec6a1b442098863d577c19b0c0/2f9701e60fd24e948c2c74fe9e55ce23.html "How to register a custom code-based agent (BYOA) to Joule via A2A.") :arrow_upper_right:
+[Observe and Analyze — SAP AI Agent Hub](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/1fdc1df35d414cd6bf2ed15ec8a164f4.html "Monitor agent usage, measure business value, and analyze portfolio health.") :arrow_upper_right:
 [CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md)
 
 [SAP Managed n8n Workflows](https://help.sap.com/docs/JOULESTUDIO/7e496fe6f81f4975aec07d9c1cbd2aef/5f16a77e21d047dc968de9f7e83bca54.html "SAP Managed n8n Workflows documentation") :arrow_upper_right:

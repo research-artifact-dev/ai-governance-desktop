@@ -936,7 +936,7 @@ Generally available
 </td>
 <td valign="top">
 
-Customer-managed (CMJ) orchestrator + BYOA runtime required; see [CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) §6.8
+Customer-managed (CMJ) orchestrator + BYOA runtime required; see [CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md)
 
 </td>
 </tr>
@@ -1524,6 +1524,10 @@ Audit Log Service Next Generation: immutable, tenant-scoped, schema-validated ev
 **Related Information**  
 
 
+
+
+[AI Governance — SAP LeanIX](https://help.sap.com/docs/LEANIX/72d375467c1e4dcb872dfa2998b6328d/275887e57a441014876a9243fb67f92b.html "Implement AI governance practices in SAP LeanIX.") :arrow_upper_right:
+[Secure and Govern — SAP AI Agent Hub](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/3ea62b45d7f64a8aab15321424ffb37c.html "Verify AI assets against governance criteria and build a verified inventory.") :arrow_upper_right:
 [Precision Guardrails for Numerical Agent Outputs](../Precision-Guardrails/precision-guardrails-87a96ee.md)
 
 [Joule Studio Security](https://help.sap.com/docs/JOULESTUDIO/7e496fe6f81f4975aec07d9c1cbd2aef/c43aeca418b348bc9d56620ba84370cb.html)

@@ -98,11 +98,11 @@ Rather than intercepting outputs in real-time, run a periodic evaluation job (ni
 
 **Critical limitation**: too late for irreversible writes. A batch release quantity that was wrong when committed cannot be corrected by a nightly eval that detects the error the following morning. For regulated manufacturing, financial, or procurement write-backs, post-hoc detection is insufficient.
 
-**Where it genuinely adds value**: as a *complement* to the supervisor pattern, not a replacement. Running async batch eval alongside the supervisor builds the ground-truth dataset that the continuous improvement loop ([CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) section 6.6) consumes. The supervisor prevents committed errors in real-time; the async eval improves the agent's eval suite so future errors become less likely.
+**Where it genuinely adds value**: as a *complement* to the supervisor pattern, not a replacement. Running async batch eval alongside the supervisor builds the ground-truth dataset that the continuous improvement loop ([CIS CoE Operations Model](../CIS-CoE-Operations-Model/cis-coe-operations-model-1af392f.md) ) consumes. The supervisor prevents committed errors in real-time; the async eval improves the agent's eval suite so future errors become less likely.
 
 ### Alternative E: Rule-Based Policy Engine Only (No LLM Critic)
 
-Implement only the deterministic verification layer — a code-based gate the output must pass before write-back — without the LLM critic and without any telemetry monitoring. This is essentially Layer 2's deterministic stage from [Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) section 4.5, used as the sole quality control mechanism.
+Implement only the deterministic verification layer — a code-based gate the output must pass before write-back — without the LLM critic and without any telemetry monitoring. This is essentially Layer 2's deterministic stage from [Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) , used as the sole quality control mechanism.
 
 **What it covers**:
 
@@ -129,7 +129,7 @@ Rely entirely on the agent's own confidence score — above threshold → write-
 
 **Critical limitation**: LLM confidence scores are unreliable as a sole quality gate. Large language models are well-documented to produce high-confidence incorrect outputs — the phenomenon of "hallucination with certainty" is precisely the failure mode that confidence gating alone cannot catch. An agent that produces 12,500 kg when the correct figure is 1,250 kg may do so with 0.94 confidence.
 
-Confidence is a useful *supplementary* routing signal within a multi-stage verification stack ([Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) section 4.8) — a low confidence score adds a reason to escalate even when deterministic checks pass. It is not a standalone quality gate for write-back agents.
+Confidence is a useful *supplementary* routing signal within a multi-stage verification stack ([Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md) ) — a low confidence score adds a reason to escalate even when deterministic checks pass. It is not a standalone quality gate for write-back agents.
 
 **Sufficient when**: advisory outputs only, where the human reading the output exercises their own judgment anyway and the agent's confidence is a useful context signal rather than a decision gate.
 
@@ -166,7 +166,7 @@ Run the same task through N independent LLMs or agent configurations simultaneou
 -   Drift detection, cross-invocation monitoring, CIS proxy function
 -   Cost: N× LLM calls per invocation
 
-**Cost constraint**: the AI Units billing model ([Production Operations](../Production-Operations/production-operations-edd9e33.md) section 8.4) makes the cost implication concrete. Three Advanced-tier LLM calls per invocation instead of one changes the cost-per-committed-output metric significantly — and the FDE value case (10–30% of yearly customer benefit) depends on agent cost being substantially lower than the cost reduction generated. For high-frequency agents, ensemble approaches may consume the efficiency savings that justify the agent in the first place.
+**Cost constraint**: the AI Units billing model ([Production Operations](../Production-Operations/production-operations-edd9e33.md) ) makes the cost implication concrete. Three Advanced-tier LLM calls per invocation instead of one changes the cost-per-committed-output metric significantly — and the FDE value case (10–30% of yearly customer benefit) depends on agent cost being substantially lower than the cost reduction generated. For high-frequency agents, ensemble approaches may consume the efficiency savings that justify the agent in the first place.
 
 **Where it genuinely adds value**: for extremely high-stakes, low-frequency decisions — a major financial commitment, a one-off regulatory submission — where the cost of N× inference is small relative to the cost of an error, and where the additional confidence from multi-model agreement provides material risk reduction. Rare in typical FDE engagement scope; worth considering for specific decision types within an engagement.
 
@@ -490,7 +490,7 @@ Does not prevent committed errors
 
 ### The Supervisor Agent: When It Is Needed
 
-The supervisor pattern is the only approach that simultaneously prevents wrong outputs from being committed through architectural enforcement — the **committer pattern** (§2.3.1), where the worker holds no system-of-record write scope and a separate committer identity performs the write, not a design convention — detects cross-invocation patterns and drift without requiring CIS access to the customer tenant, and provides a data-minimizing escalation path to SAP support. No single alternative covers all three.
+The supervisor pattern is the only approach that simultaneously prevents wrong outputs from being committed through architectural enforcement — the **committer pattern** (), where the worker holds no system-of-record write scope and a separate committer identity performs the write, not a design convention — detects cross-invocation patterns and drift without requiring CIS access to the customer tenant, and provides a data-minimizing escalation path to SAP support. No single alternative covers all three.
 
 The supervisor agent is the right choice when:
 
@@ -532,7 +532,7 @@ Decision routing (If/Switch node):
     ├── BOTH CONFIRM  → commit: supervisor/committer identity writes (sapMcpClient / OData)
     ├── BOTH REJECT   → escalate: sapTaskCenter with full context
     ├── DISAGREE      → escalate: sapTaskCenter (uncertainty requires human judgment)
-    └── DETERMINISTIC UNAVAILABLE → LLM verdict only: route on the LLM-critic confidence threshold (default 0.7, calibrated during EAC — see §2.6)
+    └── DETERMINISTIC UNAVAILABLE → LLM verdict only: route on the LLM-critic confidence threshold (default 0.7, calibrated during EAC — see)
 ```
 
 The worker agent cannot write to the system of record directly — it holds no write scope at all. It is scoped **read/recommend-only** and returns a **structured proposal** (JSON: the proposed values, the supporting context, and the worker's own confidence) to the supervisor callback. On BOTH CONFIRM, the **supervisor/committer identity** — which holds the write scope the worker lacks — performs the write itself (via `sapMcpClient` or a direct OData call); the worker is never re-invoked to write. On any other verdict the supervisor escalates without a write.
@@ -771,7 +771,7 @@ The one-actor-one-agent rule applies to the specialist agents. The governance su
 
 As noted in the alternatives section: **scope the supervisor to the write-back risk surface within the engagement, not to every agent uniformly.** In most multi-agent FDE engagements, only one or two specialist agents perform irreversible write-backs. The remaining agents are advisory or read-only and do not require Workflow A.
 
-This rule is enforced automatically in Project LightSpeed's topology generation phase (Stage 5), which maps each discovered Actor primitive ([Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md), §1.3.4) to a dedicated agent specification.
+This rule is enforced automatically in Project LightSpeed's topology generation phase (Stage 5), which maps each discovered Actor primitive ([Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md),) to a dedicated agent specification.
 
 ### Worker-Supervisor Communication
 
@@ -1097,7 +1097,7 @@ Each step in detail:
 -   **Execute Action**: the agent executes the tool call or decision with full KG context available. The context from the KG reduces the probability of hallucinated values and provides the agent with the expected range of correct outputs.
 -   **Verify Result**: the agent checks the result against KG constraints or expected values before surfacing it to the user or writing it back to the system of record. This is the agent's own internal quality gate.
 
-This cycle is the agentic equivalent of the self-verification loop in the North Star Architecture Layer 2 (see also [Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md), §1.4.3). It operates as an **internal quality gate within the agent's own execution** — distinct from the governance supervisor pattern (which monitors from outside). The supervisor remains the architectural enforcement layer; LoopCraft is the agent's own discipline during execution.
+This cycle is the agentic equivalent of the self-verification loop in the North Star Architecture Layer 2 (see also [Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md),). It operates as an **internal quality gate within the agent's own execution** — distinct from the governance supervisor pattern (which monitors from outside). The supervisor remains the architectural enforcement layer; LoopCraft is the agent's own discipline during execution.
 
 The KG-enriched cycle is most valuable for agents handling Entities and BusinessObjects where SAP canonical attributes and constraints are already encoded in the knowledge graph, particularly for numerical outputs subject to the precision guardrails in [Precision Guardrails](../Precision-Guardrails/precision-guardrails-87a96ee.md).
 
@@ -1256,7 +1256,7 @@ Retain (SAP support needs this)
 </tr>
 </table>
 
-These rules should be reviewed and approved by the customer's data protection officer before Workflow C is deployed. The FDE Collaboration Agreement (CA) — which is required if any operational data leaves the customer's environment — may apply to the support relay function even though the data is sanitized. This is a legal question, not a technical one: the legal review for Workflow C must be completed during the FDE Discovery phase as part of the legal agreement planning deliverable ([Security and Data Protection](../Security-and-Data-Protection/security-and-data-protection-90b7501.md) §3.11 and [Reusable Components and Reference Implementations](../Reusable-Components/reusable-components-cb60e89.md) §9.6). The responsible party for initiating this review is the FDE Delivery Lead, in coordination with CIS Legal. Do not defer this to the Development phase — CA approval can take 10–20 business days ([Security and Data Protection](../Security-and-Data-Protection/security-and-data-protection-90b7501.md) §3.11), and a late CA blocks Workflow C deployment without a workaround.
+These rules should be reviewed and approved by the customer's data protection officer before Workflow C is deployed. The FDE Collaboration Agreement (CA) — which is required if any operational data leaves the customer's environment — may apply to the support relay function even though the data is sanitized. This is a legal question, not a technical one: the legal review for Workflow C must be completed during the FDE Discovery phase as part of the legal agreement planning deliverable ([Security and Data Protection](../Security-and-Data-Protection/security-and-data-protection-90b7501.md) and [Reusable Components and Reference Implementations](../Reusable-Components/reusable-components-cb60e89.md)). The responsible party for initiating this review is the FDE Delivery Lead, in coordination with CIS Legal. Do not defer this to the Development phase — CA approval can take 10–20 business days ([Security and Data Protection](../Security-and-Data-Protection/security-and-data-protection-90b7501.md)), and a late CA blocks Workflow C deployment without a workaround.
 
 
 <a name="loio16a4089179844b558b5905e084e431fa__section_escalation_thresholds"/>
@@ -1512,7 +1512,7 @@ The supervisor agent is itself a BAIP-managed agent with a first-class identity,
 The supervisor's governance requirements:
 
 -   **Agent identity**: separate application registration in BAIP for each supervisor workflow (A, B, C). Each has its own service credentials and authorization policies.
--   **Least-privilege**: the supervisor/committer identity holds read access to the SAP Cloud ALM telemetry pull path, write access to SAP Task Center, **and** the system-of-record write scope needed to commit approved outputs. The **worker** holds no system-of-record write scope at all (committer pattern, §2.3.1): it is read/recommend-only, so the SAP Agent Gateway denies any direct worker write. This inverts the naive arrangement — the write scope lives with the governed committer identity, not with the worker — which is exactly what makes the gate enforceable and what aligns the design with least privilege (SEC-374).
+-   **Least-privilege**: the supervisor/committer identity holds read access to the SAP Cloud ALM telemetry pull path, write access to SAP Task Center, **and** the system-of-record write scope needed to commit approved outputs. The **worker** holds no system-of-record write scope at all (committer pattern,): it is read/recommend-only, so the SAP Agent Gateway denies any direct worker write. This inverts the naive arrangement — the write scope lives with the governed committer identity, not with the worker — which is exactly what makes the gate enforceable and what aligns the design with least privilege (SEC-374).
 -   **Supervisor observability**: the supervisor's own telemetry is visible in the SAP AI Agent Hub, just like the worker's. If the supervisor itself is malfunctioning (failing to receive callbacks, not triggering escalations), the Agent Hub's IT-admin layer detects this.
 -   **Supervisor deactivation**: if the supervisor becomes unavailable, the default behavior of the worker should be to route all outputs to human review (`sapTaskCenter`), not to write-back autonomously. The fail-safe is always toward more human oversight, not less.
 
@@ -1577,7 +1577,7 @@ Workflow C creates a data flow from the customer's tenant to SAP support systems
 **Develop (formerly Execute) (MVP Build):**
 
 -   The supervisor workflows should be built in parallel with the worker agent, not after. The callback mechanism (worker → supervisor via `sapAgent` non-blocking) is a fundamental workflow design decision that cannot be retrofitted cleanly.
--   The shared state store should be provisioned as part of the BAIP environment setup (FDE Develop step 4: Environment Setup and MVP Build). The one-time **Cloud ALM LMS `serviceId` registration** (Landscape Management) that enables the Workflow B / Workflow C telemetry pull path (§2.3.2–§2.3.3) is a prerequisite of the same step — provision it before the Telemetry Monitor is wired up.
+-   The shared state store should be provisioned as part of the BAIP environment setup (FDE Develop step 4: Environment Setup and MVP Build). The one-time **Cloud ALM LMS `serviceId` registration** (Landscape Management) that enables the Workflow B / Workflow C telemetry pull path (–) is a prerequisite of the same step — provision it before the Telemetry Monitor is wired up.
 -   During Internal Testing and Checkpoint (FDE Develop step 5), the supervisor's behavior should be tested explicitly: does it correctly block invalid outputs, does it escalate via Task Center, does Workflow B fire anomalies on injected test data?
 
 **Productization:**
@@ -1733,6 +1733,10 @@ Supervisor scope decided in Discovery; built in parallel with worker; included i
 **Related Information**  
 
 
+
+
+[Code-Based Agents (Bring Your Own Agent)](https://help.sap.com/docs/JOULE/ba88d1ec6a1b442098863d577c19b0c0/2f9701e60fd24e948c2c74fe9e55ce23.html "How to register a custom code-based agent (BYOA) to Joule via A2A.") :arrow_upper_right:
+[Transitioning from Customer-Managed Joule](https://help.sap.com/docs/JOULE_WORK/621104a90a01407fbb2d1613db39a54d/ed5033369d554472b601504b33d10e2a.html "Transition from CMJ to SAP-managed provisioning to access Joule Work and all current Joule innovations.") :arrow_upper_right:
 [Multi-Agent Orchestration](../Multi-Agent-Orchestration/multi-agent-orchestration-04e5d45.md)
 
 [Agent Quality Framework](../Agent-Quality-Framework/agent-quality-framework-4a9b908.md)

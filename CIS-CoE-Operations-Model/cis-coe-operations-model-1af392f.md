@@ -1053,7 +1053,7 @@ Practical rule for engagements:
 
 The FDE Engagement Playbook (Oct 2026) formalizes the **Adoption Strategy** as a mandatory, living document produced during every FDE engagement and handed over as part of the productization package — a structured document defining how the deployed agent will be adopted, sustained, and governed by the customer organization after the FDE team departs. It is a formal handover artifact alongside the T&O operational runbook, the agent authorization matrix, and the Sirius security concept documentation; a productization package without it has no documented path for what happens when adoption stalls.
 
-[Customer Enablement and Adoption](../Customer-Enablement/customer-enablement-05fedcc.md) §12.3 is authoritative for the Adoption Strategy — its seven-section structure, its production lifecycle across the engagement (Discovery through EAC and productization), and its quality gate. The one element maintained here, because it is the CIS CoE's canonical governance reference, is the nine-role governance roster below (required by Adoption Strategy Section 3).
+[Customer Enablement and Adoption](../Customer-Enablement/customer-enablement-05fedcc.md) is authoritative for the Adoption Strategy — its seven-section structure, its production lifecycle across the engagement (Discovery through EAC and productization), and its quality gate. The one element maintained here, because it is the CIS CoE's canonical governance reference, is the nine-role governance roster below (required by Adoption Strategy Section 3).
 
 ### Nine Adoption Governance Roles
 
@@ -1197,6 +1197,10 @@ Parallel to the **Build** track (agent construction) and **Operate** track (supe
 **Related Information**  
 
 
+
+
+[SAP AI Agent Hub](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/8ebd704d35a746c180af003db1f5acb0.html "Introduction to SAP AI Agent Hub, its benefits, and core capabilities.") :arrow_upper_right:
+[Observe and Analyze — SAP AI Agent Hub](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/1fdc1df35d414cd6bf2ed15ec8a164f4.html "Monitor agent usage, measure business value, and analyze portfolio health.") :arrow_upper_right:
 [Joule Studio Overview](https://help.sap.com/docs/JOULESTUDIO/7e496fe6f81f4975aec07d9c1cbd2aef/36d3e974446844a1b0ffb7af8fa9446c.html "SAP Joule Studio product documentation") :arrow_upper_right:
 
 [SAP AI Agent Hub — Plan and Build](https://help.sap.com/docs/AI_AGENT_HUB/225000cc2ce44a228b9534a0f1098a9b/e2a29b0c422e4aceadee658f4bbab71b.html "SAP AI Agent Hub Plan and Build documentation") :arrow_upper_right:
